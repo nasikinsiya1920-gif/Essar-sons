@@ -1,0 +1,28 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col footer-brand">
+      <a href="/" class="nav-logo"><img src="/img/logo-side.svg" alt="Essar Sons"></a>
+      <p><%= company.registeredAddress %></p>
+    </div>
+    <div class="footer-col">
+      <h3>Our Businesses</h3>
+      <ul>
+        <% divisions.forEach(function(d) { %>
+          <li><a href="<%= d.href %>"><%= d.name %></a></li>
+        <% }); %>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <%= new Date().getFullYear() %> Essar Sons</span>
+    <span><%= company.site %></span>
+  </div>
+</footer>

@@ -1,0 +1,35 @@
+<div class="contact-form-wrap" data-reveal>
+  <form class="contact-form" id="enquiryForm" novalidate>
+    <div class="form-row">
+      <label for="cf-name">Full Name</label>
+      <input type="text" id="cf-name" name="name" autocomplete="name" required>
+    </div>
+    <div class="form-row">
+      <label for="cf-company">Company <span class="form-optional">(optional)</span></label>
+      <input type="text" id="cf-company" name="company" autocomplete="organization">
+    </div>
+    <div class="form-row">
+      <label for="cf-contact">Phone or Email</label>
+      <input type="text" id="cf-contact" name="contact" autocomplete="tel email" required>
+    </div>
+    <div class="form-row">
+      <label for="cf-division">Division</label>
+      <select id="cf-division" name="division" required>
+        <option value="" disabled selected>Select a division</option>
+        <% divisions.forEach(function(d) { %>
+          <option value="<%= d.name %>"><%= d.name %></option>
+        <% }); %>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="cf-message">Tell us about your project</label>
+      <textarea id="cf-message" name="message" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send Enquiry</button>
+    <p class="form-error" id="cfError" role="alert" hidden></p>
+  </form>
+  <div class="contact-form-success" id="enquirySuccess" hidden>
+    <h3>Thank you</h3>
+    <p>Our team will be in touch shortly.</p>
+  </div>
+</div>

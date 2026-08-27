@@ -1,0 +1,18 @@
+<%
+  // Expects: items (array of strings), optional: reverse (bool), duration (string, e.g. '36s')
+  var mqItems = typeof items !== 'undefined' ? items : [];
+  var mqReverse = typeof reverse !== 'undefined' ? reverse : false;
+  var mqDuration = typeof duration !== 'undefined' ? duration : '36s';
+%>
+<div class="marquee" style="--marquee-duration: <%= mqDuration %>;">
+  <div class="marquee-track <%= mqReverse ? 'marquee-reverse' : '' %>">
+    <% [0,1].forEach(function(){ %>
+      <div class="marquee-group">
+        <% mqItems.forEach(function(item) { %>
+          <span class="marquee-item"><%= item %></span>
+          <span class="marquee-dot" aria-hidden="true"></span>
+        <% }); %>
+      </div>
+    <% }); %>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="hairline-grid division-grid" data-reveal>
+  <% divisions.forEach(function(d) { %>
+    <a href="<%= d.href %>" class="hairline-cell division-cell">
+      <span class="division-num"><%= d.num %></span>
+      <span class="division-name"><%= d.name %></span>
+      <span class="division-desc"><%= d.desc %></span>
+      <span class="division-managed">Managed by <%= d.managedBy %></span>
+      <span class="division-arrow" aria-hidden="true">&rarr;</span>
+    </a>
+  <% }); %>
+</div>

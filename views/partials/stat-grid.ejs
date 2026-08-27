@@ -1,0 +1,12 @@
+<%
+  // Expects: stats (array of [label, value] pairs)
+  var statCols = typeof cols !== 'undefined' ? cols : 2;
+%>
+<div class="stat-grid" style="--stat-cols: <%= statCols %>;" data-reveal>
+  <% stats.forEach(function(s) { %>
+    <div class="stat-cell">
+      <span class="stat-value" data-counter data-counter-text="<%= s[1] %>">0</span>
+      <span class="stat-label"><%= s[0] %></span>
+    </div>
+  <% }); %>
+</div>

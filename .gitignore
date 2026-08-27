@@ -1,0 +1,9 @@
+node_modules/
+npm-debug.log*
+
+# Runtime enquiry submissions may contain real visitor contact details
+data/enquiries.json
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db

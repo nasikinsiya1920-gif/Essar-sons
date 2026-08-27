@@ -1,0 +1,56 @@
+<%- include('partials/head', { title: title }) %>
+<%- include('partials/nav') %>
+<%- include('partials/breadcrumb', { crumb: 'Projects' }) %>
+
+<main>
+  <section class="section" data-reveal>
+    <div class="container">
+      <span class="eyebrow">All Work &middot; Essar Sons Group</span>
+      <h1 class="hero-h1 hero-h1-page" data-word-reveal>Projects across the group.</h1>
+      <p class="lead">Every project the group has delivered, across architectural glass, wholesale supply, fabrication and construction. Filter by division.</p>
+    </div>
+  </section>
+
+  <section class="section section-tight" data-reveal>
+    <div class="container">
+      <div class="filter-bar" id="projectFilters">
+        <button class="filter-pill is-active" data-filter="all">All Projects</button>
+        <button class="filter-pill" data-filter="architectural">Architectural Glass</button>
+        <button class="filter-pill" data-filter="wholesale">Glass Imports and Trading</button>
+        <button class="filter-pill" data-filter="windoors">Facade and Fenestration</button>
+        <button class="filter-pill" data-filter="lifters">Industrial Lifting &amp; Rigging</button>
+        <button class="filter-pill" data-filter="constructions">Construction</button>
+      </div>
+      <p class="filter-count"><span id="projectCount"><%= projects.length %></span> projects</p>
+
+      <div class="project-grid" id="projectGrid">
+        <% projects.forEach(function(p, i) { %>
+          <div class="project-card" data-divisions="<%= p.divisions.join(' ') %>">
+            <div class="project-card-media" style="background-image:url('<%= p.img %>')">
+              <span class="project-card-badge">0<%= i + 1 %></span>
+            </div>
+            <div class="project-card-body">
+              <h3><%= p.title %></h3>
+              <p><%= p.desc %></p>
+              <div class="project-card-meta">
+                <div><strong>Client</strong><span><%= p.client %></span></div>
+                <div><strong>Location</strong><span><%= p.location %></span></div>
+                <div><strong>Year</strong><span><%= p.year %></span></div>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-dark text-center" data-reveal>
+    <div class="container">
+      <h2 class="h2">Have a project that needs glass thinking early?</h2>
+      <a href="/contact" class="btn btn-primary">Start a Conversation</a>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+<%- include('partials/scripts') %>

@@ -1,0 +1,82 @@
+<%- include('partials/head', { title: title }) %>
+<%- include('partials/nav') %>
+<%- include('partials/breadcrumb', { crumb: 'About Us' }) %>
+
+<main>
+  <section class="section text-center" data-reveal>
+    <div class="container">
+      <span class="eyebrow">At Essar Sons</span>
+      <h1 class="hero-h1 hero-h1-page" data-word-reveal>Quality is not an Act, its an Habit!</h1>
+    </div>
+  </section>
+
+  <section class="full-band" data-reveal>
+    <img src="/img/content/office-monogram-wall.png" alt="Essar Sons office lobby with the brand monogram on the wall" loading="lazy" data-parallax data-parallax-rate="18">
+  </section>
+
+  <section class="section band-gray who-band" data-reveal>
+    <div class="who-media" data-parallax data-parallax-rate="-14">
+      <img src="/img/content/who-we-are-facade.png" alt="Glass and steel facade detail" loading="lazy">
+      <div class="who-media-mask"></div>
+    </div>
+    <div class="container who-grid">
+      <h2 class="h2 who-heading"><span class="who-heading-accent">Who we are:</span> We are a Family</h2>
+      <div class="who-text">
+        <p>The simplest one-word description of who we are: family. It is crystal clear that for more than 22 years, Essar has been a leader in the glass industry, manufacturing both structural and decorative glass. We are committed to delivering your product on time and without compromising on quality.</p>
+        <p>With all our products manufactured using the most cutting-edge equipment, Essar is synonymous with superior quality. Our expertise extends beyond a broad range of products to encompass the comprehensive range of solutions offered.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container vision-stack">
+      <div>
+        <span class="eyebrow">Our Vision</span>
+        <h2 class="h2">Growing with caution and confidence.</h2>
+        <p>Our vision is to grow sustainably and responsibly. We would like to embrace newer technologies and innovations. We also would want to keep infusing and investing in young talents which can lead the company in uncharted waters with caution and confidence.</p>
+      </div>
+      <div class="vision-stack-item">
+        <span class="eyebrow">Our Mission</span>
+        <h2 class="h2">The best product, the fairest rate, on time.</h2>
+        <p>Our mission is to give our customers the best possible products at lowest possible rates along with timely deliveries.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <span class="eyebrow">Group at a Glance</span>
+      <h2 class="h2">Six businesses. One standard.</h2>
+    </div>
+    <div class="container">
+      <%- include('partials/division-grid') %>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <span class="eyebrow">Leadership</span>
+      <h2 class="h2">Our Team</h2>
+      <div class="team-grid">
+        <% team.forEach(function(t) { %>
+          <div class="team-card">
+            <img src="<%= t.img %>" alt="Portrait of <%= t.name %>" loading="lazy">
+            <h3><%= t.name %></h3>
+            <span class="team-role"><%= t.role %></span>
+            <p><%= t.bio %></p>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-dark text-center" data-reveal>
+    <div class="container">
+      <h2 class="h2">We would be glad to hear about your project.</h2>
+      <a href="/contact" class="btn btn-primary">Contact Us</a>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+<%- include('partials/scripts') %>

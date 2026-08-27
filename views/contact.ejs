@@ -1,0 +1,59 @@
+<%- include('partials/head', { title: title }) %>
+<%- include('partials/nav') %>
+<%- include('partials/breadcrumb', { crumb: 'Contact' }) %>
+
+<main>
+  <section class="section" data-reveal>
+    <div class="container">
+      <span class="eyebrow">Contact &middot; Essar Sons Group</span>
+      <h1 class="hero-h1 hero-h1-page" data-word-reveal>Talk to the right desk.</h1>
+      <p class="lead">Every unit of the group keeps its own desk. Call the one closest to your work, or send the form below and we will route it.</p>
+    </div>
+  </section>
+
+  <section class="section section-tight" data-reveal>
+    <div class="container">
+      <div class="hairline-grid unit-grid">
+        <% contactUnits.forEach(function(u) { %>
+          <div class="hairline-cell unit-cell">
+            <span class="unit-division"><%= u.division %></span>
+            <span class="unit-name"><%= u.unit %></span>
+            <p class="unit-address"><%= u.address %></p>
+            <ul class="unit-contacts">
+              <% u.contacts.forEach(function(c) { %>
+                <li><%= c.name %> &mdash; <%= c.phone %></li>
+              <% }); %>
+            </ul>
+            <p class="unit-email"><a href="mailto:<%= u.email %>"><%= u.email %></a></p>
+            <div class="unit-ctas">
+              <a href="tel:<%= u.contacts[0].phone.replace(/\s+/g, '') %>" class="btn btn-outline btn-small">Call</a>
+              <a href="<%= u.map %>" target="_blank" rel="noopener" class="btn btn-outline btn-small">Directions</a>
+              <a href="<%= u.href %>" class="btn btn-outline btn-small">Visit Page</a>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-light" data-reveal>
+    <div class="container">
+      <span class="eyebrow">Get in Touch</span>
+      <h2 class="h2">Tell us what you're building.</h2>
+      <div class="contact-grid">
+        <div class="contact-details">
+          <p class="lead">Share a few details about your project and the right desk within the group will get back to you.</p>
+          <ul class="contact-meta">
+            <li><strong>Email</strong> <a href="mailto:<%= company.email %>"><%= company.email %></a></li>
+            <li><strong>Web</strong> <span><%= company.site %></span></li>
+            <li><strong>Region</strong> <span><%= company.region %></span></li>
+          </ul>
+        </div>
+        <%- include('partials/contact-form') %>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+<%- include('partials/scripts') %>

@@ -1,0 +1,21 @@
+<%- include('partials/head', { title: title }) %>
+<%- include('partials/nav') %>
+<%- include('partials/breadcrumb', { crumb: 'Our Businesses' }) %>
+
+<main>
+  <section class="section text-center" data-reveal>
+    <div class="container">
+      <span class="eyebrow">Group at a Glance</span>
+      <h1 class="hero-h1 hero-h1-page" data-word-reveal>One Company. One standard. Multiple businesses</h1>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <%- include('partials/division-grid') %>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+<%- include('partials/scripts') %>

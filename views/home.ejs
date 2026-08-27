@@ -1,0 +1,218 @@
+<%- include('partials/head', { title: title, bodyClass: 'home' }) %>
+
+<div class="intro-overlay" id="homeIntro" aria-hidden="true">
+  <div class="intro-logo-wrap" id="introLogoWrap">
+    <img src="/img/logo-center.svg" alt="" class="intro-logo-center">
+    <img src="/img/logo-side.svg" alt="Essar Sons" class="intro-logo-side">
+  </div>
+  <div class="intro-tag">A GROUP OF COMPANIES &middot; ESTABLISHED 20 YEARS AGO</div>
+</div>
+
+<%- include('partials/nav') %>
+
+<main>
+  <section class="hero hero-home">
+    <div class="hero-media-wrap" id="heroMediaWrap" data-parallax data-parallax-rate="-16">
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
+        <source src="/video/hero-hallway.mov">
+      </video>
+      <div class="hero-media-fallback" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=70')"></div>
+    </div>
+    <div class="hero-gradient"></div>
+    <div class="container hero-content">
+      <span class="eyebrow">A group of companies &middot; <%= company.established %></span>
+      <h1 class="hero-h1 hero-h1-dark" data-word-reveal>Innovating with strength, building with trust.</h1>
+      <p class="hero-lead hero-lead-dark">Glass, aluminium and structural solutions that people can build their lives and businesses around — engineered with precision, delivered with care.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Get a Quote</a>
+        <a href="#divisions" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/marquee', { items: ['ARCHITECTURAL GLASS','GLASS IMPORTS & TRADING','FACADE & FENESTRATION','INDUSTRIAL LIFTING & RIGGING','CONSTRUCTION'], duration: '34s' }) %>
+
+  <section class="section band-gray about-band" data-reveal>
+    <div class="about-media" data-parallax data-parallax-rate="-18">
+      <img src="/img/content/modern-school-ulwe.png" alt="Glass facade of a modern building" loading="lazy">
+      <div class="about-media-mask"></div>
+    </div>
+    <div class="container">
+      <div class="about-content">
+        <span class="eyebrow">About Us</span>
+        <h2 class="h2">Here quality is not an act, it's a habit.</h2>
+        <div class="two-col">
+          <p>The simplest one-word description of who we are: family. It is crystal clear that for more than 22 years, Essar has been a leader in the glass industry, manufacturing both structural and decorative glass. We are committed to delivering your product on time and without compromising on quality.</p>
+          <p>With all our products manufactured using the most cutting-edge equipment, Essar is synonymous with superior quality. Our expertise extends beyond a broad range of products to encompass the comprehensive range of solutions offered.</p>
+        </div>
+        <div class="pillars">
+          <div class="pillar">
+            <h3>Trusted</h3>
+            <p>Two decades of engineering standards behind every project.</p>
+          </div>
+          <div class="pillar">
+            <h3>Modern</h3>
+            <p>Current techniques and finishes, never dated craft.</p>
+          </div>
+          <div class="pillar">
+            <h3>Agile</h3>
+            <p>Solutions fitted to the need, from single homes to full facades.</p>
+          </div>
+        </div>
+        <a href="/about" class="btn btn-primary">Our Story &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="divisions" data-reveal>
+    <div class="container">
+      <span class="eyebrow">Group at a Glance</span>
+      <h2 class="h2">Six businesses. One standard.</h2>
+    </div>
+    <div class="container">
+      <%- include('partials/division-grid') %>
+    </div>
+  </section>
+
+  <section class="section band-dark" data-reveal>
+    <div class="container story-grid">
+      <div class="story-text">
+        <p class="pull-quote">Mature and trusted where it counts. Modern and agile wherever it helps.</p>
+        <p class="story-body">Toughened, laminated and fire-rated glass, specified to code and delivered by a team that has been doing this for over two decades.</p>
+        <span class="badge"><span class="badge-dot" aria-hidden="true"></span>Certified fabrication standards</span>
+      </div>
+      <div class="story-media">
+        <div class="story-media-primary"><img src="/img/content/essar-door-sign.png" alt="Essar gate signage at the processing unit" loading="lazy" data-parallax data-parallax-rate="-20"></div>
+        <div class="story-media-secondary"><img src="/img/content/crate-lift.png" alt="Crated glass panel lifted at the Essar yard" loading="lazy" data-parallax data-parallax-rate="16"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-light clients-band" data-reveal>
+    <div class="container">
+      <h2 class="h2 text-center">Trusted by builders, brands and institutions.</h2>
+    </div>
+    <div class="logo-marquee">
+      <div class="logo-marquee-track">
+        <% [0,1].forEach(function(){ %>
+          <div class="logo-marquee-group">
+            <% clientsRowA.forEach(function(c) { %>
+              <span class="logo-cell"><img src="<%= c.logo %>" alt="<%= c.name %>" loading="lazy"></span>
+            <% }); %>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+    <div class="logo-marquee">
+      <div class="logo-marquee-track logo-marquee-reverse">
+        <% [0,1].forEach(function(){ %>
+          <div class="logo-marquee-group">
+            <% clientsRowB.forEach(function(c) { %>
+              <span class="logo-cell"><img src="<%= c.logo %>" alt="<%= c.name %>" loading="lazy"></span>
+            <% }); %>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <span class="eyebrow">Our Projects</span>
+      <h2 class="h2">Designed and delivered with care.</h2>
+    </div>
+    <div class="container">
+      <%- include('partials/project-slider', { projects: projects, id: 'home-slider' }) %>
+    </div>
+    <div class="container text-center" style="margin-top: 32px;">
+      <a href="/projects" class="text-link">View All Projects &rarr;</a>
+    </div>
+  </section>
+
+  <section class="section band-light" data-reveal>
+    <div class="container">
+      <h2 class="h2 text-center">In their words.</h2>
+      <div class="testimonial-slider" id="home-testimonials">
+        <div class="testimonial-slide is-active">
+          <p class="testimonial-quote">"Working with Essar Sons was a great experience — their expertise and dedication brought our vision of a glass bridge to life with exceptional precision and quality. The result is not just a structural marvel but a statement of innovation that connects our office spaces beautifully."</p>
+          <p class="testimonial-author">Nanubhai Premjibhai Bambharolia <span>Director, Meril Life Sciences</span></p>
+        </div>
+        <div class="slider-dots">
+          <button class="slider-dot is-active" data-slide-to="0" aria-label="Go to testimonial 1"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <span class="eyebrow">Find Us</span>
+      <h2 class="h2">Visit a unit near you.</h2>
+    </div>
+    <div class="container">
+      <div class="hairline-grid location-grid">
+        <% homeUnits.forEach(function(u) { %>
+          <div class="hairline-cell location-cell">
+            <span class="location-division"><%= u.unit %></span>
+            <p class="location-address"><%= u.address %></p>
+            <p class="location-contact"><%= u.contacts[0].name %> &mdash; <%= u.contacts[0].phone %></p>
+            <p class="location-email"><a href="mailto:<%= u.email %>"><%= u.email %></a></p>
+            <div class="location-ctas">
+              <a href="tel:+91<%= u.contacts[0].phone.replace(/\D/g, '') %>" class="btn btn-primary btn-small">Call</a>
+              <a href="<%= u.map %>" target="_blank" rel="noopener" class="btn btn-outline btn-small">Get Directions</a>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-gray" data-reveal>
+    <div class="container">
+      <span class="eyebrow">How We Work</span>
+      <h2 class="h2">Your convenience, our priority.</h2>
+      <div class="process-grid">
+        <div class="process-tile">
+          <img src="/img/content/workers-installation.png" alt="Installers fitting a glass panel on site" loading="lazy">
+          <span>On-site Installation &amp; Fabrication</span>
+        </div>
+        <div class="process-tile">
+          <img src="/img/content/bridge-aerial-install.png" alt="Aerial view of a glass panel being installed between buildings" loading="lazy">
+          <span>Construction &amp; Site Teams</span>
+        </div>
+        <div class="process-tile">
+          <img src="/img/content/material-handling.png" alt="Material handling and warehousing operations" loading="lazy">
+          <span>Material Handling &amp; Warehousing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-dark statement-band" data-reveal>
+    <div class="container text-center">
+      <div class="divider"></div>
+      <p class="pull-quote pull-quote-large">Innovating with strength, building with trust.</p>
+    </div>
+  </section>
+
+  <section class="section band-light" id="contact" data-reveal>
+    <div class="container">
+      <span class="eyebrow">Get in Touch</span>
+      <h2 class="h2">Tell us what you're building.</h2>
+      <div class="contact-grid">
+        <div class="contact-details">
+          <p class="lead">Share a few details about your project and the right desk within the group will get back to you.</p>
+          <ul class="contact-meta">
+            <li><strong>Email</strong> <a href="mailto:<%= company.email %>"><%= company.email %></a></li>
+            <li><strong>Web</strong> <span><%= company.site %></span></li>
+            <li><strong>Region</strong> <span><%= company.region %></span></li>
+          </ul>
+        </div>
+        <%- include('partials/contact-form') %>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+<%- include('partials/scripts') %>

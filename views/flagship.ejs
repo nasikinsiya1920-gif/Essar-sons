@@ -1,0 +1,116 @@
+<%- include('partials/head', { title: title }) %>
+<%- include('partials/nav') %>
+<%- include('partials/breadcrumb', { crumb: firm.name }) %>
+
+<main>
+  <section class="hero hero-flagship band-dark" data-parallax-container>
+    <div class="hero-media" style="background-image: linear-gradient(180deg, rgba(14,42,59,0.4) 0%, rgba(14,42,59,0.86) 100%), url('<%= firm.heroImg %>')" data-parallax data-parallax-rate="-28"></div>
+    <div class="container hero-content">
+      <span class="eyebrow eyebrow-light"><%= firm.eyebrow %></span>
+      <h1 class="hero-h1" data-word-reveal><%= firm.name %>.</h1>
+      <p class="hero-managed">Managed by <%= firm.managedBy %></p>
+      <p class="hero-lead"><%= firm.tagline %></p>
+    </div>
+  </section>
+
+  <%- include('partials/marquee', { items: firm.marquee, duration: '32s' }) %>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <span class="eyebrow">Our Offerings</span>
+      <h2 class="h2">What we bring to the trade.</h2>
+      <div class="offering-grid offering-grid-detailed">
+        <% firm.offerings.forEach(function(o) { %>
+          <div class="offering-card offering-card-detailed">
+            <div class="offering-card-media" style="background-image:url('<%= o.img %>')"></div>
+            <h3><%= o.title %></h3>
+            <p><%= o.desc %></p>
+          </div>
+        <% }); %>
+      </div>
+      <div class="text-center" style="margin-top: 36px;">
+        <% if (firm.catalogueUrl) { %>
+          <a href="<%= firm.catalogueUrl %>" target="_blank" rel="noopener" class="btn btn-primary">View Full Catalogue</a>
+        <% } else { %>
+          <a href="#reach" class="btn btn-primary">View Full Catalogue</a>
+        <% } %>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-gray" data-reveal>
+    <div class="container split-panel">
+      <div class="split-text">
+        <span class="eyebrow">About the Unit</span>
+        <h2 class="h2"><%= firm.aboutHeadline %></h2>
+        <p><%= firm.aboutBody %></p>
+      </div>
+      <%- include('partials/stat-grid', { stats: firm.stats, cols: 2 }) %>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <span class="eyebrow">Where We Work</span>
+      <h2 class="h2">Every kind of build.</h2>
+      <div class="offering-grid offering-grid-detailed">
+        <% firm.whereWeWork.forEach(function(w) { %>
+          <div class="offering-card offering-card-detailed">
+            <div class="offering-card-media" style="background-image:url('<%= w.img %>')"></div>
+            <h3><%= w.title %></h3>
+            <p><%= w.desc %></p>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-gray" data-reveal>
+    <div class="container">
+      <span class="eyebrow">Our Projects</span>
+      <h2 class="h2">Designed and delivered with care.</h2>
+    </div>
+    <div class="container">
+      <%- include('partials/project-slider', { projects: projects, id: firm.key + '-slider' }) %>
+    </div>
+    <div class="container text-center" style="margin-top: 32px;">
+      <a href="/projects" class="text-link">View All Projects &rarr;</a>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container split-panel">
+      <div class="split-media">
+        <img src="<%= firm.storefront.img %>" alt="The original Essar showroom storefront" loading="lazy">
+      </div>
+      <div class="split-text">
+        <span class="eyebrow">Our Roots</span>
+        <h2 class="h2"><%= firm.storefront.headline %></h2>
+        <p><%= firm.storefront.body %></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-dark" id="reach" data-reveal>
+    <div class="container reach-out">
+      <div>
+        <span class="eyebrow eyebrow-light">Reach Out</span>
+        <h2 class="h2"><%= firm.reachHeadline %></h2>
+        <p class="reach-intro"><%= firm.reachIntro %></p>
+      </div>
+      <div class="reach-details">
+        <span class="reach-label"><%= firm.office %></span>
+        <p class="reach-address"><%= firm.address %></p>
+        <p class="reach-contacts"><strong>Speak To</strong> <%= firm.contacts.join(', ') %></p>
+        <p class="reach-email"><a href="mailto:<%= firm.email %>"><%= firm.email %></a></p>
+        <div class="reach-ctas">
+          <a href="tel:<%= firm.tel %>" class="btn btn-primary">Call the Unit</a>
+          <a href="<%= firm.map %>" target="_blank" rel="noopener" class="btn btn-outline btn-outline-light">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+<%- include('partials/scripts') %>

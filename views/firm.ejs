@@ -1,0 +1,96 @@
+<%- include('partials/head', { title: title }) %>
+<%- include('partials/nav') %>
+<%- include('partials/breadcrumb', { crumb: firm.name }) %>
+
+<main>
+  <section class="hero hero-firm band-dark" style="background-image: linear-gradient(180deg, rgba(14,42,59,0.55) 0%, rgba(14,42,59,0.88) 100%), url('<%= firm.heroImg %>')">
+    <div class="container hero-content">
+      <span class="eyebrow eyebrow-light"><%= firm.eyebrow %></span>
+      <h1 class="hero-h1 hero-h1-page" data-word-reveal><%= firm.name %></h1>
+      <p class="hero-managed">Managed by <%= firm.managedBy %></p>
+      <p class="hero-tagline"><%= firm.tagline %></p>
+      <p class="hero-lead"><%= firm.intro %></p>
+    </div>
+  </section>
+
+  <%- include('partials/marquee', { items: firm.marquee, duration: '32s' }) %>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <div class="section-head-row">
+        <div>
+          <span class="eyebrow">Our Offerings</span>
+          <h2 class="h2">What we make.</h2>
+        </div>
+        <a href="#reach" class="text-link">Enquire Now &rarr;</a>
+      </div>
+      <div class="offering-grid">
+        <% firm.offerings.forEach(function(o) { %>
+          <div class="offering-card" style="background-image: linear-gradient(180deg, rgba(14,42,59,0) 45%, rgba(14,42,59,0.85) 100%), url('<%= o.img %>')">
+            <span><%= o.title %></span>
+          </div>
+        <% }); %>
+      </div>
+      <div class="text-center" style="margin-top: 36px;">
+        <a href="#reach" class="btn btn-primary">Enquire Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-gray" data-reveal>
+    <div class="container split-panel">
+      <div class="split-text">
+        <span class="eyebrow">About the Unit</span>
+        <h2 class="h2"><%= firm.aboutHeadline %></h2>
+        <p><%= firm.aboutBody %></p>
+      </div>
+      <%- include('partials/stat-grid', { stats: firm.stats, cols: 2 }) %>
+    </div>
+    <div class="container">
+      <div class="strip-image">
+        <img src="<%= firm.aboutImg %>" alt="<%= firm.name %> facility" loading="lazy" data-parallax data-parallax-rate="-14">
+      </div>
+    </div>
+  </section>
+
+  <% if (firm.team) { %>
+    <section class="section" data-reveal>
+      <div class="container">
+        <span class="eyebrow">Leadership</span>
+        <h2 class="h2">Our Team</h2>
+        <div class="team-grid team-grid-small">
+          <% firm.team.forEach(function(t) { %>
+            <div class="team-card">
+              <img src="<%= t[2] %>" alt="Portrait of <%= t[0] %>" loading="lazy">
+              <h3><%= t[0] %></h3>
+              <span class="team-role"><%= t[1] %></span>
+            </div>
+          <% }); %>
+        </div>
+      </div>
+    </section>
+  <% } %>
+
+  <section class="section band-dark" id="reach" data-reveal>
+    <div class="container reach-out">
+      <div>
+        <span class="eyebrow eyebrow-light">Reach Out</span>
+        <h2 class="h2"><%= firm.reachHeadline %></h2>
+        <a href="<%= firm.map %>" target="_blank" rel="noopener" class="text-link text-link-light">Visit <%= firm.name %> &rarr;</a>
+      </div>
+      <div class="reach-details">
+        <span class="reach-label"><%= firm.office %></span>
+        <p class="reach-address"><%= firm.address %></p>
+        <p class="reach-contacts"><strong>Speak To</strong> <%= firm.contacts.join(', ') %></p>
+        <p class="reach-email"><a href="mailto:<%= firm.email %>"><%= firm.email %></a></p>
+        <div class="reach-ctas">
+          <a href="tel:<%= firm.tel %>" class="btn btn-primary">Call Us</a>
+          <a href="<%= firm.map %>" target="_blank" rel="noopener" class="btn btn-outline btn-outline-light">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+<%- include('partials/scripts') %>

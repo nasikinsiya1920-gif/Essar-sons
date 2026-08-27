@@ -1,0 +1,34 @@
+<%
+  var sliderId = typeof id !== 'undefined' ? id : 'slider-' + Math.random().toString(36).slice(2, 8);
+  var sliderProjects = typeof projects !== 'undefined' ? projects : [];
+%>
+<div class="project-slider" id="<%= sliderId %>" data-autoplay="15000">
+  <div class="slider-track">
+    <% sliderProjects.forEach(function(p, i) { %>
+      <div class="slider-slide <%= i === 0 ? 'is-active' : '' %>" <%- p.video ? '' : `style="background-image: linear-gradient(180deg, rgba(14,42,59,0.15) 0%, rgba(14,42,59,0.75) 100%), url('${p.img}')"` %>>
+        <% if (p.video) { %>
+          <video class="slider-video" autoplay muted loop playsinline>
+            <source src="<%= p.video %>" type="video/mp4">
+          </video>
+          <div class="slider-video-overlay"></div>
+        <% } %>
+        <div class="slider-caption">
+          <span class="eyebrow slider-caption-eyebrow">Project &mdash; 0<%= i + 1 %></span>
+          <h3><%= p.title %></h3>
+          <p><%= p.desc %></p>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+  <div class="slider-controls">
+    <div class="slider-dots">
+      <% sliderProjects.forEach(function(p, i) { %>
+        <button class="slider-dot <%= i === 0 ? 'is-active' : '' %>" data-slide-to="<%= i %>" aria-label="Go to slide <%= i + 1 %>"></button>
+      <% }); %>
+    </div>
+    <div class="slider-arrows">
+      <button class="slider-arrow" data-slide-prev aria-label="Previous slide">&larr;</button>
+      <button class="slider-arrow" data-slide-next aria-label="Next slide">&rarr;</button>
+    </div>
+  </div>
+</div>
