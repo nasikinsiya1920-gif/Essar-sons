@@ -131,6 +131,9 @@ app.use((req, res) => {
   res.status(404).render('404', { title: 'Page Not Found — Essar Sons Group' });
 });
 
-app.listen(PORT, () => {
-  console.log(`Essar Sons website running at http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => console.log(`Running on port ${PORT}`));
+}
+
+module.exports = app;
