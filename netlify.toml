@@ -1,13 +1,13 @@
 [build]
   command = "npm install"
+  publish = "public"
 
 [functions]
   external_node_modules = ["express", "ejs"]
   node_bundler = "esbuild"
-  included_files = ["views/**", "public/**"]
+  included_files = ["views/**"]
 
 [[redirects]]
-  force = true
   from = "/*"
   status = 200
   to = "/.netlify/functions/server"
