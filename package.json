@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "@netlify/functions": "^6.0.0",
+    "dotenv": "^17.4.2",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "resend": "^6.25.0",
     "serverless-http": "^4.0.0"
   },
   "devDependencies": {

@@ -7,3 +7,4 @@ data/enquiries.json
 # OS / editor cruft
 .DS_Store
 Thumbs.db
+.env

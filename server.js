@@ -1,6 +1,9 @@
+require('dotenv').config();
+
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const { Resend } = require('resend');
 
 const company = require('./data/company');
 const divisions = require('./data/divisions');
@@ -14,6 +17,8 @@ const clients = require('./data/clients');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const ENQUIRIES_FILE = path.join(__dirname, 'data', 'enquiries.json');
+const resend = new Resend(process.env.RESEND_API_KEY);
+const ENQUIRY_FROM_EMAIL = 'noreply@essarsons.com';
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(process.cwd(), 'views'));
@@ -95,7 +100,7 @@ app.get('/business/:firm', (req, res, next) => {
   });
 });
 
-app.post('/api/enquiry', (req, res) => {
+app.post('/api/enquiry', async (req, res) => {
   const { name, company: companyName, contact, division, message } = req.body;
 
   if (!name || !contact || !division) {
@@ -122,7 +127,23 @@ app.post('/api/enquiry', (req, res) => {
   fs.writeFileSync(ENQUIRIES_FILE, JSON.stringify(enquiries, null, 2));
 
   console.log('New enquiry received:', entry);
-  // TODO: wire up email/CRM delivery
+
+  try {
+    await resend.emails.send({
+      from: ENQUIRY_FROM_EMAIL,
+      to: process.env.NOTIFY_EMAIL,
+      subject: `New enquiry from ${entry.name} — ${entry.division}`,
+      html: `
+        <p><strong>Name:</strong> ${entry.name}</p>
+        <p><strong>Company:</strong> ${entry.company || '—'}</p>
+        <p><strong>Phone/Email:</strong> ${entry.contact}</p>
+        <p><strong>Division:</strong> ${entry.division}</p>
+        <p><strong>Message:</strong> ${entry.message || '—'}</p>
+      `,
+    });
+  } catch (err) {
+    console.error('Failed to send enquiry notification email:', err);
+  }
 
   res.json({ ok: true });
 });
