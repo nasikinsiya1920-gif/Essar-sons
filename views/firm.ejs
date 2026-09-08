@@ -6,7 +6,7 @@
   <section class="hero hero-firm band-dark" style="background-image: linear-gradient(180deg, rgba(14,42,59,0.55) 0%, rgba(14,42,59,0.88) 100%), url('<%= firm.heroImg %>')">
     <div class="container hero-content">
       <span class="eyebrow eyebrow-light"><%= firm.eyebrow %></span>
-      <h1 class="hero-h1 hero-h1-page" data-word-reveal><%= firm.name %></h1>
+      <h1 class="hero-h1 hero-h1-page" data-word-reveal><%= typeof h1 !== 'undefined' ? h1 : firm.name %></h1>
       <p class="hero-managed">Managed by <%= firm.managedBy %></p>
       <p class="hero-tagline"><%= firm.tagline %></p>
       <p class="hero-lead"><%= firm.intro %></p>

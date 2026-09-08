@@ -7,12 +7,18 @@
     <div class="container">
       <span class="eyebrow">Group at a Glance</span>
       <h1 class="hero-h1 hero-h1-page" data-word-reveal>One Company. One standard. Multiple businesses</h1>
+      <p class="lead" style="margin-left: auto; margin-right: auto;">Our architectural and imported glass divisions are often known together simply as Essar Glass — two specialisms, one standard, under the Essar Sons Group.</p>
     </div>
   </section>
 
   <section class="section" data-reveal>
     <div class="container">
-      <%- include('partials/division-grid') %>
+      <% const businessDivisions = divisions.map(function(d) {
+        if (d.key === 'lifters') return Object.assign({}, d, { name: d.name + ' (Alfa Lifters)' });
+        if (d.key === 'constructions') return Object.assign({}, d, { name: d.name + ' (ACPL — Arsiwala Construction Pvt Ltd)' });
+        return d;
+      }); %>
+      <%- include('partials/division-grid', { divisions: businessDivisions }) %>
     </div>
   </section>
 </main>

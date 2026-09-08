@@ -64,7 +64,7 @@ module.exports = {
     ],
     aboutHeadline: 'A trusted partner for bulk glass solutions.',
     aboutBody:
-      "Essar is a leading wholesaler of architectural glass in Maharashtra, catering to retailers across Mumbai, Pune, Surat, Nashik, and more. We take pride in our prompt delivery system, mechanised loading and unloading, ample warehouse capacity, and in-house transport fleet — ensuring efficiency at every step. With top-brand glass, streamlined logistics, and a professional team, we are your trusted partner for bulk glass solutions.",
+      "Essar is a leading laminated glass supplier and wholesaler of architectural glass in Maharashtra, catering to retailers across Mumbai, Pune, Surat, Nashik, and more. We take pride in our prompt delivery system, mechanised loading and unloading, ample warehouse capacity, and in-house transport fleet — ensuring efficiency at every step. With top-brand glass, streamlined logistics, and a professional team, we are your trusted partner for bulk glass solutions.",
     aboutImg: '/img/content/material-handling.png',
     stats: [
       ['On-Time Delivery Rate', '100%'],

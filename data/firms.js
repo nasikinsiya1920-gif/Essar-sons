@@ -21,7 +21,7 @@ module.exports = {
     ],
     aboutHeadline: 'A decade of fabrication for Mumbai builders.',
     aboutBody:
-      "Essar Windoors delivers expert aluminum fabrication and glass façade solutions tailored to modern needs. Backed by over a decade of experience, our team offers durable, high-quality windows, doors, partitions, louvers, and more. We have partnered with major builders across Mumbai and its suburbs, bringing precision, trusted sourcing, and versatile designs to every residential and commercial project.",
+      "As a facade contractor in Mumbai, Essar Windoors delivers expert aluminum fabrication and glass façade solutions tailored to modern needs. Backed by over a decade of experience, our team offers durable, high-quality windows, doors, partitions, louvers, and more. We have partnered with major builders across Mumbai and its suburbs, bringing precision, trusted sourcing, and versatile designs to every residential and commercial project.",
     aboutImg: 'https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1600&q=70',
     stats: [
       ['Projects Completed', '50+'],
@@ -57,7 +57,7 @@ module.exports = {
     ],
     aboutHeadline: 'A large vendor base, a nationwide dispatch desk.',
     aboutBody:
-      "We offer a wide range of high-quality material handling equipment in various specs to meet diverse client needs. Backed by a skilled team, strong warehousing, and ethical practices, we ensure smooth order processing, fast dispatch, and reliable nationwide delivery—striving always for customer satisfaction. Because of our large vendor base, we have been prominent suppliers pan India. Our primary goal is to make sure that our strong, durable and easy to use products are delivered to our customers at the most competitive rates in the country.",
+      "As an industrial lifting equipment supplier in Mumbai, we offer a wide range of high-quality material handling equipment in various specs to meet diverse client needs. Backed by a skilled team, strong warehousing, and ethical practices, we ensure smooth order processing, fast dispatch, and reliable nationwide delivery—striving always for customer satisfaction. Because of our large vendor base, we have been prominent suppliers pan India. Our primary goal is to make sure that our strong, durable and easy to use products are delivered to our customers at the most competitive rates in the country.",
     aboutImg: '/img/content/warehouse-crane.png',
     stats: [
       ['No. of Units Sold', '3000+'],
@@ -95,7 +95,7 @@ module.exports = {
     ],
     aboutHeadline: 'From Essar Builders to a RERA-registered developer.',
     aboutBody:
-      "Established in 2011, Arsiwala Constructions (ACPL) evolved from Essar Builders to bring a professional edge to real estate. Specializing in high-rise residential and commercial spaces in Mumbai, ACPL is a RERA-registered firm known for quality and compliance. Landmark projects in Virar include Essar Apex, Essar Villa, and other community-focused developments that reflect our commitment to excellence and growth.",
+      "Established in 2011, Arsiwala Constructions (ACPL) is a commercial construction company in Mumbai that evolved from Essar Builders to bring a professional edge to real estate. Specializing in high-rise residential and commercial spaces in Mumbai, ACPL is a RERA-registered firm known for quality and compliance. Landmark projects in Virar include Essar Apex, Essar Villa, and other community-focused developments that reflect our commitment to excellence and growth.",
     aboutImg: '/img/content/workers-installation.png',
     stats: [
       ['Total sq. ft Constructed', '1,56,000+'],

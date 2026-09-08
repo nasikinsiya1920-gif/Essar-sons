@@ -56,7 +56,7 @@ app.get('/about', (req, res) => {
 app.get('/businesses', (req, res) => {
   res.render('businesses', {
     title: 'Our Businesses',
-    description: 'One company, one standard, multiple businesses — explore the five divisions of Essar Sons Group, each managed by its own specialist firm.',
+    description: 'Essar Sons Group operates across architectural glass and glass trading (Essar Glass), facade and fenestration (Essar Windoors), industrial lifting (Alfa Lifters), and construction (ACPL) — five divisions, one standard.',
   });
 });
 
@@ -89,19 +89,40 @@ app.get('/business/architectural-glass', (req, res) => {
 app.get('/business/glass-wholesale', (req, res) => {
   const firm = flagshipFirms.wholesale;
   res.render('flagship', {
-    title: firm.name,
-    description: firm.tagline,
+    title: 'Laminated Glass Supplier in Maharashtra',
+    description: 'Essar Sons Group is a laminated glass supplier in Maharashtra, wholesaling float, laminated and processed glass to retailers and fabricators across Mumbai, Pune, Surat and Nashik.',
+    h1: "Glass Imports and Trading, Maharashtra's Laminated Glass Supplier.",
     firm,
     projects: projectsFor('wholesale').slice(0, 6),
   });
 });
 
+const firmSeoOverrides = {
+  windoors: {
+    title: 'Facade Contractor in Mumbai',
+    description: 'Essar Windoors is a facade contractor in Mumbai, delivering aluminium fabrication and glass façade solutions — windows, doors, partitions and cubicles.',
+    h1: "Facade and Fenestration, Mumbai's Facade Contractor for Aluminium and Glass.",
+  },
+  lifters: {
+    title: 'Industrial Lifting Equipment Supplier in Mumbai',
+    description: 'Excel Traders and Muzaf Enterprise are an industrial lifting equipment supplier in Mumbai, supplying hoists, winches, slings and material handling equipment nationwide.',
+    h1: "Lifting Tackles and Material Handling — Mumbai's Industrial Lifting Equipment Supplier.",
+  },
+  constructions: {
+    title: 'Commercial Construction Company in Mumbai',
+    description: 'Arsiwala Constructions (ACPL) is a commercial construction company in Mumbai, building RERA-registered high-rise residential and commercial spaces across Virar and the region.',
+    h1: "Construction, Mumbai's Commercial Construction Company.",
+  },
+};
+
 app.get('/business/:firm', (req, res, next) => {
   const firm = firms[req.params.firm];
   if (!firm) return next();
+  const seo = firmSeoOverrides[req.params.firm] || {};
   res.render('firm', {
-    title: firm.name,
-    description: firm.tagline,
+    title: seo.title || firm.name,
+    description: seo.description || firm.tagline,
+    h1: seo.h1,
     firm,
   });
 });

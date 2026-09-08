@@ -68,9 +68,15 @@
     <div class="container">
       <span class="eyebrow">Group at a Glance</span>
       <h2 class="h2">Multiple businesses. One standard.</h2>
+      <p class="lead">Our architectural and imported glass businesses are often known together simply as Essar Glass — distinct divisions, one standard, under the Essar Sons Group.</p>
     </div>
     <div class="container">
-      <%- include('partials/division-grid') %>
+      <% const homeDivisions = divisions.map(function(d) {
+        if (d.key === 'lifters') return Object.assign({}, d, { name: d.name + ' (Alfa Lifters)' });
+        if (d.key === 'constructions') return Object.assign({}, d, { name: d.name + ' (ACPL — Arsiwala Construction Pvt Ltd)' });
+        return d;
+      }); %>
+      <%- include('partials/division-grid', { divisions: homeDivisions }) %>
     </div>
   </section>
 
