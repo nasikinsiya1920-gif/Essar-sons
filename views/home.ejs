@@ -1,4 +1,4 @@
-<%- include('partials/head', { title: title, bodyClass: 'home' }) %>
+<%- include('partials/head', { title: title, description: description, bodyClass: 'home' }) %>
 
 <div class="intro-overlay" id="homeIntro" aria-hidden="true">
   <div class="intro-logo-wrap" id="introLogoWrap">
@@ -13,8 +13,8 @@
 <main>
   <section class="hero hero-home">
     <div class="hero-media-wrap" id="heroMediaWrap" data-parallax data-parallax-rate="-16">
-      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
-        <source src="/video/hero-hallway.mov">
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto">
+        <source src="/video/hero-hallway.mp4" type="video/mp4">
       </video>
       <div class="hero-media-fallback" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=70')"></div>
     </div>
@@ -34,7 +34,7 @@
 
   <section class="section band-gray about-band" data-reveal>
     <div class="about-media" data-parallax data-parallax-rate="-18">
-      <img src="/img/content/modern-school-ulwe.png" alt="Glass facade of a modern building" loading="lazy">
+      <img src="/img/content/about-glass-highrise.jpg" alt="Glass highrise towers in a city" loading="lazy">
       <div class="about-media-mask"></div>
     </div>
     <div class="container">
@@ -42,13 +42,13 @@
         <span class="eyebrow">About Us</span>
         <h2 class="h2">Here quality is not an act, it's a habit.</h2>
         <div class="two-col">
-          <p>The simplest one-word description of who we are: family. It is crystal clear that for more than 22 years, Essar has been a leader in the glass industry, manufacturing both structural and decorative glass. We are committed to delivering your product on time and without compromising on quality.</p>
+          <p>The simplest one-word description of who we are: family. It is crystal clear that for more than 40 years, Essar has been a leader in the glass industry, manufacturing both structural and decorative glass. We are committed to delivering your product on time and without compromising on quality.</p>
           <p>With all our products manufactured using the most cutting-edge equipment, Essar is synonymous with superior quality. Our expertise extends beyond a broad range of products to encompass the comprehensive range of solutions offered.</p>
         </div>
         <div class="pillars">
           <div class="pillar">
             <h3>Trusted</h3>
-            <p>Two decades of engineering standards behind every project.</p>
+            <p>Four decades of engineering standards behind every project.</p>
           </div>
           <div class="pillar">
             <h3>Modern</h3>
@@ -67,7 +67,7 @@
   <section class="section" id="divisions" data-reveal>
     <div class="container">
       <span class="eyebrow">Group at a Glance</span>
-      <h2 class="h2">Six businesses. One standard.</h2>
+      <h2 class="h2">Multiple businesses. One standard.</h2>
     </div>
     <div class="container">
       <%- include('partials/division-grid') %>
@@ -78,7 +78,7 @@
     <div class="container story-grid">
       <div class="story-text">
         <p class="pull-quote">Mature and trusted where it counts. Modern and agile wherever it helps.</p>
-        <p class="story-body">Toughened, laminated and fire-rated glass, specified to code and delivered by a team that has been doing this for over two decades.</p>
+        <p class="story-body">Toughened, laminated and fire-rated glass, specified to code and delivered by a team that has been doing this for over four decades.</p>
         <span class="badge"><span class="badge-dot" aria-hidden="true"></span>Certified fabrication standards</span>
       </div>
       <div class="story-media">
@@ -188,12 +188,6 @@
     </div>
   </section>
 
-  <section class="section band-dark statement-band" data-reveal>
-    <div class="container text-center">
-      <div class="divider"></div>
-      <p class="pull-quote pull-quote-large">Innovating with strength, building with trust.</p>
-    </div>
-  </section>
 
   <section class="section band-light" id="contact" data-reveal>
     <div class="container">

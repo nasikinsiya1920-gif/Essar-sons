@@ -1,8 +1,8 @@
 // Real projects supplied by the client, with real photography/video.
 const PROJECTS = [
   {
-    title: 'Jivdhani Glass Skywalk, Virar',
-    desc: 'A glass walkway suspended over a mountain — one of the rarest structures the group has engineered, and proof of what 20 years of specialised glasswork can deliver.',
+    title: 'Jivdani Glass Skywalk, Virar',
+    desc: 'A glass walkway suspended over a mountain — one of the rarest structures the group has engineered, and proof of what 40 years of specialised glasswork can deliver.',
     video: '/img/content/jivdhani-project.mp4',
     client: 'Jivdani Mata Mandir Trust',
     location: 'Virar, Maharashtra',
@@ -11,7 +11,7 @@ const PROJECTS = [
   },
   {
     title: 'Glass Bridge Floor Construction at Meril Life Sciences',
-    desc: 'A structural glass floor for the connecting bridge between towers — engineered for full walkable load while keeping the span visually open across the facade.',
+    desc: 'A structural glass floor for the connecting bridge between towers — first of its kind for an office building in India.',
     img: '/img/content/meril-glass-bridge.png',
     client: 'Meril Life Sciences',
     location: 'Vapi, Gujarat',

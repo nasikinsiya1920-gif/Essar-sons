@@ -1,4 +1,4 @@
-<%- include('partials/head', { title: title }) %>
+<%- include('partials/head', { title: title, description: description }) %>
 <%- include('partials/nav') %>
 <%- include('partials/breadcrumb', { crumb: firm.name }) %>
 
@@ -32,7 +32,11 @@
         <% }); %>
       </div>
       <div class="text-center" style="margin-top: 36px;">
-        <a href="#reach" class="btn btn-primary">Enquire Now</a>
+        <% if (firm.catalogueUrl) { %>
+          <a href="<%= firm.catalogueUrl %>" target="_blank" rel="noopener" class="btn btn-primary"><%= firm.catalogueLabel %></a>
+        <% } else { %>
+          <a href="#reach" class="btn btn-primary">Enquire Now</a>
+        <% } %>
       </div>
     </div>
   </section>

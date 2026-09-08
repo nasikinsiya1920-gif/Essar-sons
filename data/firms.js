@@ -46,12 +46,14 @@ module.exports = {
     tagline: 'Nationwide Suppliers of Lifting Tackles and Material Handling Equipment',
     intro:
       "Excel Traders and Muzaf Enterprise provide dependable material and lifting equipment solutions—backed by trusted manufacturing, thoughtful quality control, and a commitment to fair pricing and nationwide service.",
-    heroImg: '/img/content/crate-lift.png',
+    heroImg: '/img/content/lifters-hero-chain-hoists.jpg',
+    catalogueUrl: 'https://alfalifters.com/',
+    catalogueLabel: 'View All Our Products',
     marquee: ['HOISTS', 'WINCHES', 'LIFTING CLAMPS', 'SLINGS', 'MATERIAL HANDLING', 'PAN-INDIA DELIVERY'],
     offerings: [
-      { title: 'Electric and Manual Hoist and Winches', img: '/img/content/crate-lift.png' },
-      { title: 'Lifting Clamps and Slings', img: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=60' },
-      { title: 'Material Handling Equipment', img: '/img/content/material-handling.png' },
+      { title: 'Electric and Manual Hoist and Winches', img: '/img/content/lifters-electric-hoist.jpg' },
+      { title: 'Lifting Clamps and Slings', img: '/img/content/lifters-slings.jpg' },
+      { title: 'Material Handling Equipment', img: '/img/content/lifters-pallet-stacker.jpg' },
     ],
     aboutHeadline: 'A large vendor base, a nationwide dispatch desk.',
     aboutBody:

@@ -2,7 +2,6 @@ require('dotenv').config();
 
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
 const { Resend } = require('resend');
 
 const company = require('./data/company');
@@ -16,7 +15,6 @@ const clients = require('./data/clients');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const ENQUIRIES_FILE = path.join(__dirname, 'data', 'enquiries.json');
 const resend = new Resend(process.env.RESEND_API_KEY);
 const ENQUIRY_FROM_EMAIL = 'noreply@essarsons.com';
 
@@ -38,7 +36,8 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
   const splitAt = Math.ceil(clients.length / 2);
   res.render('home', {
-    title: 'Essar Sons Group — Innovating with strength, building with trust.',
+    title: 'Glass, Aluminium & Construction Solutions',
+    description: 'Glass, aluminium and structural solutions that people can build their lives and businesses around — engineered with precision, delivered with care.',
     clientsRowA: clients.slice(0, splitAt),
     clientsRowB: clients.slice(splitAt),
     projects: projectsFor('all').slice(0, 6),
@@ -48,27 +47,31 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about', {
-    title: 'About Us — Essar Sons Group',
+    title: 'About Us',
+    description: 'For more than 40 years, Essar has been a leader in the glass industry, manufacturing both structural and decorative glass.',
     team,
   });
 });
 
 app.get('/businesses', (req, res) => {
   res.render('businesses', {
-    title: 'Our Businesses — Essar Sons Group',
+    title: 'Our Businesses',
+    description: 'One company, one standard, multiple businesses — explore the five divisions of Essar Sons Group, each managed by its own specialist firm.',
   });
 });
 
 app.get('/projects', (req, res) => {
   res.render('projects', {
-    title: 'Projects — Essar Sons Group',
+    title: 'Projects',
+    description: 'Every project the group has delivered, across architectural glass, wholesale supply, fabrication and construction. Filter by division.',
     projects: PROJECTS,
   });
 });
 
 app.get('/contact', (req, res) => {
   res.render('contact', {
-    title: 'Contact — Essar Sons Group',
+    title: 'Contact Us',
+    description: 'Every unit of the group keeps its own desk. Find contact details and addresses for our head office and all five business divisions.',
     contactUnits,
   });
 });
@@ -76,7 +79,8 @@ app.get('/contact', (req, res) => {
 app.get('/business/architectural-glass', (req, res) => {
   const firm = flagshipFirms.architectural;
   res.render('flagship', {
-    title: `${firm.name} — Essar Sons Group`,
+    title: firm.name,
+    description: firm.tagline,
     firm,
     projects: projectsFor('architectural').slice(0, 6),
   });
@@ -85,7 +89,8 @@ app.get('/business/architectural-glass', (req, res) => {
 app.get('/business/glass-wholesale', (req, res) => {
   const firm = flagshipFirms.wholesale;
   res.render('flagship', {
-    title: `${firm.name} — Essar Sons Group`,
+    title: firm.name,
+    description: firm.tagline,
     firm,
     projects: projectsFor('wholesale').slice(0, 6),
   });
@@ -95,7 +100,8 @@ app.get('/business/:firm', (req, res, next) => {
   const firm = firms[req.params.firm];
   if (!firm) return next();
   res.render('firm', {
-    title: `${firm.name} — Essar Sons Group`,
+    title: firm.name,
+    description: firm.tagline,
     firm,
   });
 });
@@ -108,23 +114,12 @@ app.post('/api/enquiry', async (req, res) => {
   }
 
   const entry = {
-    id: Date.now(),
     name: String(name).trim(),
     company: companyName ? String(companyName).trim() : '',
     contact: String(contact).trim(),
     division: String(division).trim(),
     message: message ? String(message).trim() : '',
-    receivedAt: new Date().toISOString(),
   };
-
-  let enquiries = [];
-  try {
-    enquiries = JSON.parse(fs.readFileSync(ENQUIRIES_FILE, 'utf8'));
-  } catch (err) {
-    enquiries = [];
-  }
-  enquiries.push(entry);
-  fs.writeFileSync(ENQUIRIES_FILE, JSON.stringify(enquiries, null, 2));
 
   console.log('New enquiry received:', entry);
 
@@ -149,7 +144,10 @@ app.post('/api/enquiry', async (req, res) => {
 });
 
 app.use((req, res) => {
-  res.status(404).render('404', { title: 'Page Not Found — Essar Sons Group' });
+  res.status(404).render('404', {
+    title: 'Page Not Found',
+    description: "The page you're looking for doesn't exist. Head back to the Essar Sons Group homepage.",
+  });
 });
 
 if (require.main === module) {

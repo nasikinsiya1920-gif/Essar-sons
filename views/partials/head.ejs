@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="google-site-verification" content="3QSbbL5k2gupGSkqtWajIwrYe4lOoVHAYhAmf097CPQ" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %></title>
+  <title><%= title %> | Essar Sons Group</title>
+  <meta name="description" content="<%= description %>">
+  <meta property="og:title" content="<%= title %> | Essar Sons Group">
+  <meta property="og:description" content="<%= description %>">
+  <meta property="og:image" content="https://essarsons.com/img/og-cover.jpg">
+  <meta property="og:url" content="https://essarsons.com<%= currentPath %>">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <% if (typeof bodyClass !== 'undefined' && bodyClass === 'home') { %>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://essarsons.com/#organization",
+    "name": "Essar Sons Group",
+    "url": "https://essarsons.com",
+    "logo": "https://essarsons.com/img/logo-full-black.jpg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "sales@essarsons.in",
+      "contactType": "sales"
+    },
+    "sameAs": ["https://www.linkedin.com/company/essarsons", "https://www.instagram.com/essargroup.co/"]
+  }
+  </script>
+  <% } %>
 </head>
 <body class="<%= typeof bodyClass !== 'undefined' ? bodyClass : '' %>">

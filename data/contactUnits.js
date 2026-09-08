@@ -3,13 +3,13 @@
 // The Glass Retail (Essar Traders) unit has been removed from the group.
 module.exports = [
   {
-    division: 'Architectural Glass Solutions',
-    href: '/business/architectural-glass',
-    unit: 'Glass Processing Unit',
-    address: 'Alfa Enterprises, Plot no. 674, Raipada, Opp. Siddhesh Garage, Veer Savarkar Marg, Virar East — 401305',
-    contacts: [{ name: 'Ali Arsiwala', phone: '9594364561' }],
-    email: 'glassiers@outlook.com',
-    map: 'https://www.google.com/maps/search/?api=1&query=Veer+Savarkar+Marg+Virar+East',
+    division: 'Head Office',
+    href: '/about',
+    unit: 'Head Office and Showroom',
+    address: 'Essar Sons, Shop No. 11, Agashi Road, Virat Nagar, Virar West, Mumbai — 401303',
+    contacts: [{ name: 'Yahya Arsiwala', phone: '90282 65217' }],
+    email: 'sales@essarsons.in',
+    map: 'https://www.google.com/maps/search/?api=1&query=Agashi+Road+Virar+West',
     showOnHome: true,
   },
   {

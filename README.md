@@ -18,7 +18,7 @@ The site runs at [http://localhost:3000](http://localhost:3000) by default. Set 
 - `views/` — EJS templates. `views/partials/` holds shared components (nav, footer, marquee, division grid, stat grid, project slider, contact form).
 - `public/css/style.css` — the full design system (colors, type, layout, animations).
 - `public/js/main.js` — vanilla JS for nav behavior, word-reveal, scroll-reveal, parallax, sliders, stat counters, the homepage intro animation, the contact form, and the projects filter.
-- `data/enquiries.json` — enquiry submissions from `POST /api/enquiry` are appended here (see `// TODO: wire up email/CRM delivery` in `server.js`).
+- `POST /api/enquiry` — sends each contact-form submission by email via Resend (see `RESEND_API_KEY`/`NOTIFY_EMAIL` in `.env`). Nothing is written to the local filesystem, since that doesn't survive on serverless hosts like Netlify.
 
 ## Real assets vs. remaining placeholders
 
@@ -27,7 +27,7 @@ The client supplied a folder of real photography, logos and a project video, now
 - **Logo** — `public/img/logo-side.svg` (horizontal lockup) is used in the nav and footer; `public/img/logo-center.svg` (mark) is used in the homepage intro overlay, crossfading into the side lockup as it animates into the nav position.
 - **Client logos** — the homepage "Trusted by builders, brands and institutions." section renders the real supplied logo artwork for all 19 clients (`public/img/clients/`), not text chips.
 - **Team photos** — all 7 director headshots (`public/img/team/`) are the real supplied photography, used on the About page and (Fakhruddin, Mohammadally) on the Lifting Equipment page.
-- **Projects** (`data/projects.js`) — all three projects listed are real, client-supplied work, not placeholders: the Jivdhani Glass Skywalk (Virar) uses the real supplied video (`jivdhani-project.mp4`), autoplaying muted/looped in the project slider; the Meril Life Sciences glass bridge floor and the Indian Model School (Ulwe) facade each use the real supplied photo. There are only three because that's the real project history supplied — earlier placeholder/stock projects have been removed rather than padded out with invented ones.
+- **Projects** (`data/projects.js`) — all three projects listed are real, client-supplied work, not placeholders: the Jivdani Glass Skywalk (Virar) uses the real supplied video (`jivdhani-project.mp4`), autoplaying muted/looped in the project slider; the Meril Life Sciences glass bridge floor and the Indian Model School (Ulwe) facade each use the real supplied photo. There are only three because that's the real project history supplied — earlier placeholder/stock projects have been removed rather than padded out with invented ones.
 - **Facility photography** — real photos of the Essar warehouse, processing floor, crane loading, on-site installation, and the original storefront gate signage are used across the homepage (Story band, Process band), About page (header band, Vision panel), and the division/firm pages (heroes, offerings, "Where It Started" sections).
 
 A handful of images remain **stock placeholders** because no matching real photo was supplied — flag these for replacement before launch:
