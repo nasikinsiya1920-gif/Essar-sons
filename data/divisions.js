@@ -35,7 +35,7 @@ module.exports = [
     desc: 'Trade of lifting machinery and tackles and industrial material handling equipment.',
     managedBy: 'Excel Traders and Muzaf Enterprise',
     href: '/business/lifters',
-    img: 'https://images.unsplash.com/photo-1581093458791-9d09d5edf5a6?auto=format&fit=crop&w=900&q=60',
+    img: 'https://images.unsplash.com/photo-1730584475949-a01e4663003a?auto=format&fit=crop&w=900&q=60',
     key: 'lifters',
   },
   {

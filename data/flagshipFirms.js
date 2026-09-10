@@ -47,7 +47,7 @@ module.exports = {
     contacts: ['Mohammad Arsiwala: 8369882427', 'Fakhruddin Arsiwala'],
     email: 'enquiries@essarsons.com',
     tel: '+918369882427',
-    map: 'https://www.google.com/maps/place/Alfa+Enterprises+-+Lifters/@19.4511663,72.8041197,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7aa381ff3e6ff:0x7ec8b3b0e091a4ad!8m2!3d19.4511663!4d72.8066946!16s%2Fg%2F11j2_vlgzm?entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D',
+    map: 'https://www.google.com/maps/dir//EXCEL+TRADERS,+H+674,+C%2FO+Essar,+Raipada+Stop,+Veer+Savarkar+Marg,+opposite+Siddhesh+Garage,+Shirgaon,+Vasai-Virar,+Maharashtra+401303/@19.4576384,72.8006656,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7a932240f8c01:0xecc869efd1e060c9!2m2!1d72.8559124!2d19.4692311?entry=ttu&g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D',
   },
   wholesale: {
     key: 'wholesale',
@@ -64,7 +64,7 @@ module.exports = {
     ],
     aboutHeadline: 'A trusted partner for bulk glass solutions.',
     aboutBody:
-      "Essar is a leading laminated glass supplier and wholesaler of architectural glass in Maharashtra, catering to retailers across Mumbai, Pune, Surat, Nashik, and more. We take pride in our prompt delivery system, mechanised loading and unloading, ample warehouse capacity, and in-house transport fleet — ensuring efficiency at every step. With top-brand glass, streamlined logistics, and a professional team, we are your trusted partner for bulk glass solutions.",
+      "Essar is a leading laminated glass supplier and wholesaler of architectural glass in Maharashtra, catering to retailers across Mumbai, Pune, Surat, Nashik, and more. We take pride in our prompt delivery system, mechanised loading and unloading, ample warehouse capacity, and in-house transport fleet — ensuring efficiency at every step. With top-brand float, laminated and toughened glass, streamlined logistics, and a professional team, we are your trusted partner for bulk glass solutions.",
     aboutImg: '/img/content/material-handling.png',
     stats: [
       ['On-Time Delivery Rate', '100%'],
@@ -85,6 +85,6 @@ module.exports = {
     contacts: ['Ali Arsiwala: 9594364561'],
     email: 'glassiers@outlook.com',
     tel: '+919594364561',
-    map: 'https://www.google.com/maps/search/?api=1&query=Veer+Savarkar+Marg+Virar+East',
+    map: 'https://www.google.com/maps/dir//EXCEL+TRADERS,+H+674,+C%2FO+Essar,+Raipada+Stop,+Veer+Savarkar+Marg,+opposite+Siddhesh+Garage,+Shirgaon,+Vasai-Virar,+Maharashtra+401303/@19.4576384,72.8006656,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7a932240f8c01:0xecc869efd1e060c9!2m2!1d72.8559124!2d19.4692311?entry=ttu&g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D',
   },
 };

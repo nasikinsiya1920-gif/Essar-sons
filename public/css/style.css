@@ -100,6 +100,58 @@ button { font-family: inherit; cursor: pointer; }
   max-width: 640px;
 }
 
+.article-body {
+  max-width: 760px;
+}
+.article-body p { color: var(--navy-72); font-size: 16.5px; }
+.article-list {
+  list-style: disc;
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+.article-list li { color: var(--navy-72); margin-bottom: 10px; line-height: 1.6; }
+.article-figure { margin: 28px 0; }
+.article-figure img { border-radius: 10px; width: 100%; }
+.article-figure figcaption {
+  font-size: 13px;
+  color: var(--navy-50);
+  margin-top: 8px;
+}
+
+.article-related {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--navy-14);
+}
+.article-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.article-related-card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 140px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.article-related-media {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.article-related-card span {
+  position: relative;
+  z-index: 1;
+  padding: 16px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14.5px;
+}
+
 .divider {
   width: 56px;
   height: 2px;

@@ -1,0 +1,30 @@
+<%- include('partials/head', { title: title, description: description }) %>
+<%- include('partials/nav') %>
+<%- include('partials/breadcrumb', { crumb: 'Blog' }) %>
+
+<main>
+  <section class="section text-center" data-reveal>
+    <div class="container">
+      <span class="eyebrow">Essar Sons Group</span>
+      <h1 class="hero-h1 hero-h1-page" data-word-reveal>Blog</h1>
+      <p class="lead" style="margin-left: auto; margin-right: auto;">Straightforward, practical guides on glass, facades and lifting equipment — written to help you choose the right material or product for your project.</p>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="container">
+      <div class="hairline-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <% posts.forEach(function(post) { %>
+          <a href="/blog/<%= post.slug %>" class="hairline-cell division-cell">
+            <span class="division-name"><%= post.title %></span>
+            <span class="division-desc"><%= post.excerpt %></span>
+            <span class="division-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+<%- include('partials/scripts') %>

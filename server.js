@@ -12,6 +12,7 @@ const flagshipFirms = require('./data/flagshipFirms');
 const contactUnits = require('./data/contactUnits');
 const team = require('./data/team');
 const clients = require('./data/clients');
+const blogPosts = require('./data/blog');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -56,7 +57,7 @@ app.get('/about', (req, res) => {
 app.get('/businesses', (req, res) => {
   res.render('businesses', {
     title: 'Our Businesses',
-    description: 'Essar Sons Group operates across architectural glass and glass trading (Essar Glass), facade and fenestration (Essar Windoors), industrial lifting (Alfa Lifters), and construction (ACPL) — five divisions, one standard.',
+    description: 'Essar Sons Group operates across architectural glass and glass trading (Essar Glass), facade and fenestration (Essar Windoors), industrial lifting and material handling, and construction (ACPL) — five divisions, one standard.',
   });
 });
 
@@ -73,6 +74,31 @@ app.get('/contact', (req, res) => {
     title: 'Contact Us',
     description: 'Every unit of the group keeps its own desk. Find contact details and addresses for our head office and all five business divisions.',
     contactUnits,
+  });
+});
+
+app.get('/enquiry-received', (req, res) => {
+  res.render('enquiry-received', {
+    title: 'Enquiry Received',
+    description: 'Thank you for reaching out to Essar Sons Group. Our team will review your enquiry and get back to you shortly.',
+  });
+});
+
+app.get('/blog', (req, res) => {
+  res.render('blog', {
+    title: 'Blog',
+    description: 'Practical, accurate guides on glass, facades and lifting equipment from Essar Sons Group — toughened vs laminated glass, aluminium vs UPVC windows, and how to choose lifting belts.',
+    posts: blogPosts,
+  });
+});
+
+app.get('/blog/:slug', (req, res, next) => {
+  const post = blogPosts.find((p) => p.slug === req.params.slug);
+  if (!post) return next();
+  res.render('blog-post', {
+    title: post.title,
+    description: post.description,
+    post,
   });
 });
 
@@ -107,6 +133,7 @@ const firmSeoOverrides = {
     title: 'Industrial Lifting Equipment Supplier in Mumbai',
     description: 'Excel Traders and Muzaf Enterprise are an industrial lifting equipment supplier in Mumbai, supplying hoists, winches, slings and material handling equipment nationwide.',
     h1: "Lifting Tackles and Material Handling — Mumbai's Industrial Lifting Equipment Supplier.",
+    offeringsHeading: 'Our Product Range.',
   },
   constructions: {
     title: 'Commercial Construction Company in Mumbai',
@@ -123,6 +150,7 @@ app.get('/business/:firm', (req, res, next) => {
     title: seo.title || firm.name,
     description: seo.description || firm.tagline,
     h1: seo.h1,
+    offeringsHeading: seo.offeringsHeading,
     firm,
   });
 });

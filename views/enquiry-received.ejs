@@ -1,0 +1,17 @@
+<%- include('partials/head', { title: title, description: description }) %>
+<%- include('partials/nav') %>
+<%- include('partials/breadcrumb', { crumb: 'Enquiry Received' }) %>
+
+<main>
+  <section class="section text-center" data-reveal>
+    <div class="container">
+      <span class="eyebrow">Enquiry Received</span>
+      <h1 class="hero-h1 hero-h1-page" data-word-reveal>Thank you — we've received your enquiry.</h1>
+      <p class="lead" style="margin-left: auto; margin-right: auto;">Our team will review the details and get back to you shortly. If it's urgent, you can also reach the right unit directly from our <a href="/contact">Contact page</a>.</p>
+      <p style="margin-top: 24px;"><a href="/" class="btn btn-primary">Back to Home</a></p>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+<%- include('partials/scripts', { fireLeadEvent: true }) %>

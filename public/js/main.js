@@ -248,7 +248,6 @@
      ------------------------------------------------------------------ */
   document.querySelectorAll('.contact-form-wrap').forEach(function (wrap) {
     var form = wrap.querySelector('.contact-form');
-    var success = wrap.querySelector('.contact-form-success');
     var errorEl = wrap.querySelector('.form-error');
     if (!form) return;
 
@@ -283,8 +282,7 @@
         .then(function (res) { return res.json().then(function (body) { return { ok: res.ok, body: body }; }); })
         .then(function (result) {
           if (result.ok && result.body.ok) {
-            form.hidden = true;
-            if (success) success.hidden = false;
+            window.location.href = '/enquiry-received';
           } else {
             throw new Error((result.body && result.body.error) || 'Something went wrong.');
           }

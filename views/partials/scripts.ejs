@@ -1,3 +1,11 @@
   <script src="/js/main.js"></script>
+  <% if (typeof fireLeadEvent !== 'undefined' && fireLeadEvent) { %>
+  <script>
+    gtag('event', 'generate_lead', {
+      'event_category': 'contact_form',
+      'event_label': 'website_enquiry'
+    });
+  </script>
+  <% } %>
 </body>
 </html>

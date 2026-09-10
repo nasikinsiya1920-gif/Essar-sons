@@ -9,7 +9,7 @@ module.exports = [
     address: 'Essar Sons, Shop No. 11, Agashi Road, Virat Nagar, Virar West, Mumbai — 401303',
     contacts: [{ name: 'Yahya Arsiwala', phone: '90282 65217' }],
     email: 'sales@essarsons.in',
-    map: 'https://www.google.com/maps/search/?api=1&query=Agashi+Road+Virar+West',
+    map: 'https://www.google.com/maps/dir//Essar+Sons,+Shop+no.11,+unique+Rashmi+Shopping+Centre,+Agashi+Rd,+Virat+Nagar,+Virar+West,+Mumbai,+Vasai-Virar,+Maharashtra+401303/@19.4576384,72.8006656,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7a980cff7a411:0x3be35b1a7dccd888!2m2!1d72.8067549!2d19.4511868?entry=ttu&g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D',
     showOnHome: true,
   },
   {
@@ -19,7 +19,7 @@ module.exports = [
     address: 'Plot no. 674, Raipada, Opp. Siddhesh Garage, Veer Savarkar Marg, Virar East — 401305',
     contacts: [{ name: 'Ali Arsiwala', phone: '9594364561' }],
     email: 'glassiers@outlook.com',
-    map: 'https://www.google.com/maps/search/?api=1&query=Veer+Savarkar+Marg+Virar+East',
+    map: 'https://www.google.com/maps/dir//EXCEL+TRADERS,+H+674,+C%2FO+Essar,+Raipada+Stop,+Veer+Savarkar+Marg,+opposite+Siddhesh+Garage,+Shirgaon,+Vasai-Virar,+Maharashtra+401303/@19.4576384,72.8006656,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7a932240f8c01:0xecc869efd1e060c9!2m2!1d72.8559124!2d19.4692311?entry=ttu&g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D',
     showOnHome: true,
   },
   {
@@ -39,7 +39,7 @@ module.exports = [
     address: 'Alfa Enterprises, 94 Abdul Rehman Street, Mumbai — 400003',
     contacts: [{ name: 'Mohammadally Arsiwala', phone: '8369882427' }],
     email: 'sales@alfalifters.com',
-    map: 'https://www.google.com/maps/search/?api=1&query=Abdul+Rehman+Street+Mumbai',
+    map: 'https://www.google.com/maps/dir//Alfa+Enterprises,+94,+Abdul+Rehman+St,+Chippi+Chawl,+Kalbadevi,+Mumbai,+Maharashtra+400003/@19.4576384,72.8006656,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7cfca76a1aa13:0x41bc4ae3e56308c5!2m2!1d72.8323855!2d18.9517761?entry=ttu&g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D',
     showOnHome: true,
   },
   {
@@ -52,7 +52,7 @@ module.exports = [
       { name: 'Zakir Arsiwala', phone: '98600 78651' },
     ],
     email: 'essarsons@live.com',
-    map: 'https://www.google.com/maps/search/?api=1&query=Agashi+Road+Virar+West',
+    map: 'https://www.google.com/maps/dir//Essar+Sons,+Shop+no.11,+unique+Rashmi+Shopping+Centre,+Agashi+Rd,+Virat+Nagar,+Virar+West,+Mumbai,+Vasai-Virar,+Maharashtra+401303/@19.4576384,72.8006656,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7a980cff7a411:0x3be35b1a7dccd888!2m2!1d72.8067549!2d19.4511868?entry=ttu&g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D',
     showOnHome: false,
   },
 ];

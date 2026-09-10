@@ -72,7 +72,6 @@
     </div>
     <div class="container">
       <% const homeDivisions = divisions.map(function(d) {
-        if (d.key === 'lifters') return Object.assign({}, d, { name: d.name + ' (Alfa Lifters)' });
         if (d.key === 'constructions') return Object.assign({}, d, { name: d.name + ' (ACPL — Arsiwala Construction Pvt Ltd)' });
         return d;
       }); %>

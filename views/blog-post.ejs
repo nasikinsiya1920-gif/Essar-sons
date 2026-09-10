@@ -1,0 +1,50 @@
+<%- include('partials/head', { title: post.title, description: post.description }) %>
+<%- include('partials/nav') %>
+<%- include('partials/breadcrumb', { crumb: post.title }) %>
+
+<main>
+  <section class="section" data-reveal>
+    <div class="container article-body">
+      <span class="eyebrow">Essar Sons Group Blog</span>
+      <h1 class="hero-h1 hero-h1-page"><%= post.title %></h1>
+
+      <% post.content.forEach(function(block) { %>
+        <% if (block.type === 'h2') { %>
+          <h2 class="h2" style="font-size: clamp(22px, 2.4vw, 32px); margin-top: 40px;"><%= block.text %></h2>
+        <% } else if (block.type === 'h3') { %>
+          <h3><%= block.text %></h3>
+        <% } else if (block.type === 'p') { %>
+          <p><%- block.text %></p>
+        <% } else if (block.type === 'ul') { %>
+          <ul class="article-list">
+            <% block.items.forEach(function(item) { %>
+              <li><%- item %></li>
+            <% }); %>
+          </ul>
+        <% } else if (block.type === 'img') { %>
+          <figure class="article-figure">
+            <img src="<%= block.src %>" alt="<%= block.alt %>" loading="lazy">
+            <% if (block.caption) { %><figcaption><%= block.caption %></figcaption><% } %>
+          </figure>
+        <% } %>
+      <% }); %>
+
+      <div class="article-related">
+        <span class="eyebrow">Related</span>
+        <div class="article-related-grid">
+          <% post.relatedLinks.forEach(function(link) { %>
+            <a href="<%= link.href %>" class="article-related-card">
+              <div class="article-related-media" style="background-image: linear-gradient(180deg, rgba(14,42,59,0) 40%, rgba(14,42,59,0.8) 100%), url('<%= link.heroImg %>')"></div>
+              <span><%= link.label %> &rarr;</span>
+            </a>
+          <% }); %>
+        </div>
+      </div>
+
+      <p style="margin-top: 32px;"><a href="/blog" class="text-link">&larr; Back to Blog</a></p>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+<%- include('partials/scripts') %>

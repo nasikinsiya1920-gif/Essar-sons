@@ -21,7 +21,7 @@ module.exports = {
     ],
     aboutHeadline: 'A decade of fabrication for Mumbai builders.',
     aboutBody:
-      "As a facade contractor in Mumbai, Essar Windoors delivers expert aluminum fabrication and glass façade solutions tailored to modern needs. Backed by over a decade of experience, our team offers durable, high-quality windows, doors, partitions, louvers, and more. We have partnered with major builders across Mumbai and its suburbs, bringing precision, trusted sourcing, and versatile designs to every residential and commercial project.",
+      "As a facade contractor in Mumbai, Essar Windoors delivers expert aluminum fabrication and glass façade solutions tailored to modern needs. Backed by over a decade of experience, our team offers durable, high-quality glass windows, glass doors, glass wall systems, partitions, louvers, and more. We have partnered with major builders across Mumbai and its suburbs, bringing precision, trusted sourcing, and versatile designs to every residential and commercial project.",
     aboutImg: 'https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1600&q=70',
     stats: [
       ['Projects Completed', '50+'],
@@ -45,7 +45,7 @@ module.exports = {
     eyebrow: 'Division 04 · Essar Sons Group',
     tagline: 'Nationwide Suppliers of Lifting Tackles and Material Handling Equipment',
     intro:
-      "Excel Traders and Muzaf Enterprise provide dependable material and lifting equipment solutions—backed by trusted manufacturing, thoughtful quality control, and a commitment to fair pricing and nationwide service.",
+      "Excel Traders and Muzaf Enterprise provide dependable material and lifting equipment solutions—backed by trusted vendors, thoughtful quality control, and a commitment to fair pricing and nationwide service.",
     heroImg: '/img/content/lifters-hero-chain-hoists.jpg',
     catalogueUrl: 'https://alfalifters.com/',
     catalogueLabel: 'View All Our Products',
@@ -57,7 +57,7 @@ module.exports = {
     ],
     aboutHeadline: 'A large vendor base, a nationwide dispatch desk.',
     aboutBody:
-      "As an industrial lifting equipment supplier in Mumbai, we offer a wide range of high-quality material handling equipment in various specs to meet diverse client needs. Backed by a skilled team, strong warehousing, and ethical practices, we ensure smooth order processing, fast dispatch, and reliable nationwide delivery—striving always for customer satisfaction. Because of our large vendor base, we have been prominent suppliers pan India. Our primary goal is to make sure that our strong, durable and easy to use products are delivered to our customers at the most competitive rates in the country.",
+      "As an industrial lifting equipment supplier in Mumbai, we have been among the pioneers in the trade of material handling equipment such as wire ropes, chain blocks, webbing slings, lifting belts and pallet trucks. Each and every product is sourced from trusted manufacturers and vetted for top-notch raw materials and rigorous quality standards before it reaches our customers. Our primary goal is to make sure that our strong, durable and easy to use products are delivered to our customers at the most competitive rates in the country.",
     aboutImg: '/img/content/warehouse-crane.png',
     stats: [
       ['No. of Units Sold', '3000+'],
@@ -75,7 +75,7 @@ module.exports = {
     contacts: ['Mohammad Arsiwala: 8369882427'],
     email: 'sales@alfalifters.com',
     tel: '+918369882427',
-    map: 'https://www.google.com/maps/search/?api=1&query=Abdul+Rehman+Street+Mumbai',
+    map: 'https://www.google.com/maps/dir//Alfa+Enterprises,+94,+Abdul+Rehman+St,+Chippi+Chawl,+Kalbadevi,+Mumbai,+Maharashtra+400003/@19.4576384,72.8006656,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7cfca76a1aa13:0x41bc4ae3e56308c5!2m2!1d72.8323855!2d18.9517761?entry=ttu&g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D',
   },
   constructions: {
     key: 'constructions',
@@ -109,6 +109,6 @@ module.exports = {
     contacts: ['Fakhruddin Arsiwala: 79 7713 7354', 'Zakir Arsiwala: 98600 78651'],
     email: 'essarsons@live.com',
     tel: '+917977137354',
-    map: 'https://www.google.com/maps/search/?api=1&query=Agashi+Road+Virar+West',
+    map: 'https://www.google.com/maps/dir//Essar+Sons,+Shop+no.11,+unique+Rashmi+Shopping+Centre,+Agashi+Rd,+Virat+Nagar,+Virar+West,+Mumbai,+Vasai-Virar,+Maharashtra+401303/@19.4576384,72.8006656,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7a980cff7a411:0x3be35b1a7dccd888!2m2!1d72.8067549!2d19.4511868?entry=ttu&g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D',
   },
 };
