@@ -6,7 +6,7 @@ const { Resend } = require('resend');
 
 const company = require('./data/company');
 const divisions = require('./data/divisions');
-const { PROJECTS, projectsFor } = require('./data/projects');
+const { PROJECTS, projectsFor, projectBySlug } = require('./data/projects');
 const firms = require('./data/firms');
 const flagshipFirms = require('./data/flagshipFirms');
 const contactUnits = require('./data/contactUnits');
@@ -66,6 +66,16 @@ app.get('/projects', (req, res) => {
     title: 'Projects',
     description: 'Every project the group has delivered, across architectural glass, wholesale supply, fabrication and construction. Filter by division.',
     projects: PROJECTS,
+  });
+});
+
+app.get('/projects/:slug', (req, res, next) => {
+  const project = projectBySlug(req.params.slug);
+  if (!project) return next();
+  res.render('project-detail', {
+    title: project.metaTitle || project.title,
+    description: project.metaDescription || project.desc,
+    project,
   });
 });
 

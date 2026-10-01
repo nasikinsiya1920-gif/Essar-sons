@@ -110,6 +110,21 @@ button { font-family: inherit; cursor: pointer; }
   padding-left: 22px;
 }
 .article-list li { color: var(--navy-72); margin-bottom: 10px; line-height: 1.6; }
+.project-gallery-grid {
+  display: grid;
+  gap: 16px;
+}
+.project-gallery-grid-single {
+  grid-template-columns: minmax(0, 760px);
+  justify-content: center;
+}
+.project-gallery-grid-multi {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.project-gallery-item { border-radius: 10px; overflow: hidden; }
+.project-gallery-item img { width: 100%; display: block; aspect-ratio: 4 / 3; object-fit: cover; }
+.project-gallery-grid-single .project-gallery-item img { aspect-ratio: 16 / 10; }
+
 .article-figure { margin: 28px 0; }
 .article-figure img { border-radius: 10px; width: 100%; }
 .article-figure figcaption {

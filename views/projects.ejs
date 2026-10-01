@@ -25,8 +25,8 @@
 
       <div class="project-grid" id="projectGrid">
         <% projects.forEach(function(p, i) { %>
-          <div class="project-card" data-divisions="<%= p.divisions.join(' ') %>">
-            <div class="project-card-media" style="background-image:url('<%= p.img %>')">
+          <a href="/projects/<%= p.slug %>" class="project-card" data-divisions="<%= p.divisions.join(' ') %>">
+            <div class="project-card-media" style="background-image:url('<%= p.img || p.bannerImage %>')">
               <span class="project-card-badge">0<%= i + 1 %></span>
             </div>
             <div class="project-card-body">
@@ -38,7 +38,7 @@
                 <div><strong>Year</strong><span><%= p.year %></span></div>
               </div>
             </div>
-          </div>
+          </a>
         <% }); %>
       </div>
     </div>
