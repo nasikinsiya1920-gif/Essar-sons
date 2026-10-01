@@ -9,6 +9,7 @@ const PROJECTS = [
     title: 'Jivdani Glass Skywalk, Virar',
     desc: 'A glass walkway suspended over a mountain — one of the rarest structures the group has engineered, and proof of what 40 years of specialised glasswork can deliver.',
     video: '/img/content/jivdhani-project.mp4',
+    img: '/img/content/jivdani-skywalk-still.webp',
     client: 'Jivdani Mata Mandir Trust',
     location: 'Virar, Maharashtra',
     year: '2022',

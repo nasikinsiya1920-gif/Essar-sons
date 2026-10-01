@@ -87,7 +87,7 @@
   <% } %>
 
   <%
-    var galleryImages = (project.gallery && project.gallery.length) ? project.gallery : (project.img ? [{ src: project.img, alt: project.title }] : []);
+    var galleryImages = (project.gallery && project.gallery.length) ? project.gallery : ((project.img && !project.video) ? [{ src: project.img, alt: project.title }] : []);
   %>
   <% if (galleryImages.length) { %>
     <section class="section band-gray" data-reveal>
