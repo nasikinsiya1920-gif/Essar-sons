@@ -1,0 +1,17 @@
+<%
+  // Expects: cta ({ headline, text, links: [{ href, label }] }); optional showText (default true)
+  var ctaShowText = typeof showText === 'undefined' ? true : showText;
+%>
+<section class="cta-band" data-reveal>
+  <div class="container cta-band-inner">
+    <div class="cta-band-copy">
+      <h2 class="cta-band-title"><%= cta.headline %></h2>
+      <% if (ctaShowText && cta.text) { %><p class="cta-band-text"><%= cta.text %></p><% } %>
+    </div>
+    <div class="cta-band-actions">
+      <% cta.links.forEach(function(link) { %>
+        <a href="<%= link.href %>" class="btn btn-navy"><%= link.label %> &rarr;</a>
+      <% }); %>
+    </div>
+  </div>
+</section>

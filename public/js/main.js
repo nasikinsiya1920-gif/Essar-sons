@@ -244,6 +244,27 @@
   }
 
   /* ------------------------------------------------------------------
+     "Need Help?" smart tab
+     ------------------------------------------------------------------ */
+  var smartTab = document.getElementById('smartTab');
+  var smartTabToggle = document.getElementById('smartTabToggle');
+  if (smartTab && smartTabToggle) {
+    function setSmartTab(open) {
+      smartTab.classList.toggle('is-open', open);
+      smartTabToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    smartTabToggle.addEventListener('click', function () {
+      setSmartTab(!smartTab.classList.contains('is-open'));
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setSmartTab(false);
+    });
+    document.addEventListener('click', function (e) {
+      if (!smartTab.contains(e.target)) setSmartTab(false);
+    });
+  }
+
+  /* ------------------------------------------------------------------
      Contact form (shared partial, may appear multiple times per page)
      ------------------------------------------------------------------ */
   document.querySelectorAll('.contact-form-wrap').forEach(function (wrap) {

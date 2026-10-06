@@ -106,7 +106,7 @@ app.get('/blog/:slug', (req, res, next) => {
   const post = blogPosts.find((p) => p.slug === req.params.slug);
   if (!post) return next();
   res.render('blog-post', {
-    title: post.title,
+    title: post.metaTitle ? post.metaTitle.replace(/\s*\|\s*Essar Sons Group$/, '') : post.title,
     description: post.description,
     post,
   });

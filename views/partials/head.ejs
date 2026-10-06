@@ -20,6 +20,36 @@
           });
         });
       }
+
+      var headerWhatsappBtn = document.getElementById('header-whatsapp-btn');
+      if (headerWhatsappBtn) {
+        headerWhatsappBtn.addEventListener('click', function () {
+          gtag('event', 'click_to_whatsapp', {
+            event_category: 'contact',
+            event_label: 'header_whatsapp_button'
+          });
+        });
+      }
+
+      var smartTabCallBtn = document.getElementById('smart-tab-call-btn');
+      if (smartTabCallBtn) {
+        smartTabCallBtn.addEventListener('click', function () {
+          gtag('event', 'click_to_call', {
+            event_category: 'contact',
+            event_label: 'smart_tab_call_button'
+          });
+        });
+      }
+
+      var smartTabWhatsappBtn = document.getElementById('smart-tab-whatsapp-btn');
+      if (smartTabWhatsappBtn) {
+        smartTabWhatsappBtn.addEventListener('click', function () {
+          gtag('event', 'whatsapp_click', {
+            event_category: 'contact',
+            event_label: 'smart_tab_whatsapp_button'
+          });
+        });
+      }
     });
   </script>
   <meta name="google-site-verification" content="3QSbbL5k2gupGSkqtWajIwrYe4lOoVHAYhAmf097CPQ" />

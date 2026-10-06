@@ -1,0 +1,33 @@
+<% blocks.forEach(function(block) { %>
+  <% if (block.type === 'h2') { %>
+    <h2 class="h2" style="font-size: clamp(22px, 2.4vw, 32px); margin-top: 40px;"><%= block.text %></h2>
+  <% } else if (block.type === 'h3') { %>
+    <h3><%= block.text %></h3>
+  <% } else if (block.type === 'p') { %>
+    <p><%- block.text %></p>
+  <% } else if (block.type === 'ul') { %>
+    <ul class="article-list">
+      <% block.items.forEach(function(item) { %>
+        <li><%- item %></li>
+      <% }); %>
+    </ul>
+  <% } else if (block.type === 'table') { %>
+    <div class="article-table-wrap">
+      <table class="article-table">
+        <thead>
+          <tr><% block.headers.forEach(function(h) { %><th><%= h %></th><% }); %></tr>
+        </thead>
+        <tbody>
+          <% block.rows.forEach(function(row) { %>
+            <tr><% row.forEach(function(cell) { %><td><%= cell %></td><% }); %></tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  <% } else if (block.type === 'img') { %>
+    <figure class="article-figure">
+      <img src="<%= block.src %>" alt="<%= block.alt %>" loading="lazy">
+      <% if (block.caption) { %><figcaption><%= block.caption %></figcaption><% } %>
+    </figure>
+  <% } %>
+<% }); %>

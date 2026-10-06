@@ -1,0 +1,10 @@
+<aside class="smart-tab" id="smartTab" aria-label="Need help choosing?">
+  <div class="smart-tab-panel" id="smartTabPanel">
+    <p>Need assistance with your next project? Talk to Essar — one call, real answers.</p>
+    <div class="smart-tab-actions">
+      <a href="tel:<%= company.phone %>" id="smart-tab-call-btn" class="btn btn-primary btn-small">Call Us</a>
+      <a href="https://wa.me/<%= company.phone.replace(/\D/g, '') %>" id="smart-tab-whatsapp-btn" class="btn btn-whatsapp btn-small" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+  <button type="button" class="smart-tab-toggle" id="smartTabToggle" aria-expanded="false" aria-controls="smartTabPanel">Need Help?</button>
+</aside>

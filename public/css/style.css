@@ -133,38 +133,103 @@ button { font-family: inherit; cursor: pointer; }
   margin-top: 8px;
 }
 
-.article-related {
-  margin-top: 40px;
-  padding-top: 24px;
-  border-top: 1px solid var(--navy-14);
+.article-section + .cta-band + .article-section { padding-top: clamp(40px, 5vw, 64px); padding-bottom: clamp(40px, 5vw, 64px); }
+.article-section:first-of-type { padding-bottom: clamp(32px, 4vw, 48px); }
+
+.article-table-wrap { overflow-x: auto; margin: 8px 0 24px; }
+.article-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.article-table th, .article-table td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--navy-14);
+  color: var(--navy-72);
 }
-.article-related-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  margin-top: 16px;
+.article-table th {
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+  border-bottom: 2px solid var(--navy);
 }
-.article-related-card {
-  position: relative;
+.article-table td:last-child { white-space: nowrap; font-weight: 600; color: var(--navy); }
+
+/* Full-width accent CTA band linking a post to its division page */
+.btn-navy { background: var(--navy); color: #fff; }
+.btn-navy:hover { background: #17415a; color: #fff; }
+
+.cta-band { background: var(--teal); color: var(--navy); padding: clamp(32px, 4vw, 48px) 0; }
+.cta-band-inner {
   display: flex;
-  align-items: flex-end;
-  min-height: 140px;
-  border-radius: 10px;
-  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px 40px;
+  flex-wrap: wrap;
 }
-.article-related-media {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
+.cta-band-copy { flex: 1 1 360px; }
+.cta-band-title { font-size: clamp(22px, 2.6vw, 32px); line-height: 1.2; margin: 0; color: var(--navy); }
+.cta-band-text { margin: 10px 0 0; color: var(--navy); font-size: 16px; }
+.cta-band-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* "Need Help?" smart tab: vertical tab on the right edge; bottom-anchored on phones */
+.smart-tab {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 90;
+  display: flex;
+  align-items: stretch;
 }
-.article-related-card span {
-  position: relative;
-  z-index: 1;
-  padding: 16px;
+.smart-tab-toggle {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  background: var(--navy);
   color: #fff;
-  font-weight: 600;
-  font-size: 14.5px;
+  border: none;
+  padding: 18px 11px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 4px 16px rgba(14, 42, 59, 0.25);
+}
+.smart-tab-toggle:hover { background: #17415a; }
+.smart-tab-panel {
+  display: none;
+  width: 270px;
+  background: #fff;
+  border: 1px solid var(--navy-14);
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  padding: 20px;
+  box-shadow: 0 8px 28px rgba(14, 42, 59, 0.2);
+}
+.smart-tab.is-open .smart-tab-panel { display: block; }
+.smart-tab-panel p { color: var(--navy); font-size: 14.5px; line-height: 1.5; margin-bottom: 16px; }
+.smart-tab-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+@media (max-width: 700px) {
+  .smart-tab {
+    top: auto;
+    bottom: 0;
+    right: 12px;
+    transform: none;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .smart-tab-toggle {
+    writing-mode: horizontal-tb;
+    transform: none;
+    padding: 11px 18px;
+    border-radius: 8px 8px 0 0;
+  }
+  .smart-tab-panel {
+    width: min(320px, calc(100vw - 24px));
+    border: 1px solid var(--navy-14);
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+  }
 }
 
 .divider {
@@ -343,7 +408,7 @@ body.home .site-nav:not(.is-scrolled) .nav-toggle span { background: var(--navy)
    Mobile nav
    ========================================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .nav-toggle { display: flex; }
   .nav-right { gap: 8px; }
   .nav-links {
@@ -364,7 +429,9 @@ body.home .site-nav:not(.is-scrolled) .nav-toggle span { background: var(--navy)
     padding: 16px var(--container-pad);
     border-bottom: 1px solid rgba(244, 246, 247, 0.08);
   }
-  .nav-links a.btn { margin: 16px var(--container-pad); width: calc(100% - 2 * var(--container-pad)); text-align: center; }
+  /* The open menu is always a dark panel, so undo the homepage's dark-on-light link colours. */
+  body.home .site-nav:not(.is-scrolled) .nav-links > a:not(.btn) { color: rgba(244, 246, 247, 0.82); }
+  body.home .site-nav:not(.is-scrolled) .nav-links > a.active { color: var(--teal-light); }
 }
 
 @media (max-width: 600px) {

@@ -9,10 +9,14 @@ module.exports = [
     excerpt: 'Both are safety glass, but they fail in opposite ways. Here’s how toughened and laminated glass actually differ, and how to choose between them.',
     description: 'Toughened glass vs laminated glass explained: how each is made, how they break, and which to choose for windows, facades, floors and balustrades.',
     publishedDate: '2026-09-10',
-    relatedLinks: [
-      { href: '/business/glass-wholesale', label: 'Glass Imports and Trading', heroImg: '/img/content/warehouse-space.png' },
-      { href: '/business/architectural-glass', label: 'Architectural Glass Solutions', heroImg: '/img/content/architectural-hero-interior.jpg' },
-    ],
+    cta: {
+      headline: 'Sourcing or specifying glass? Talk to our glass divisions.',
+      text: 'Bulk supply from established brands, or glass processed and fitted to your design.',
+      links: [
+        { href: '/business/architectural-glass', label: 'Architectural Glass Solutions' },
+        { href: '/business/glass-wholesale', label: 'Glass Imports and Trading' },
+      ],
+    },
     content: [
       { type: 'p', text: 'Toughened glass and laminated glass are both classed as "safety glass," but they behave in almost opposite ways when they fail: toughened glass shatters into small, blunt granules, while laminated glass cracks but stays bonded together as one sheet. Which one you need depends on whether your priority is impact strength, fall-through protection, sound control, or UV blocking.' },
 
@@ -59,9 +63,11 @@ module.exports = [
     excerpt: 'Aluminium and UPVC windows solve different problems. Here’s how they actually compare on strength, insulation, maintenance and cost.',
     description: 'Aluminium vs UPVC windows compared: strength, thermal performance, maintenance, cost and lifespan — and which suits your climate and building type.',
     publishedDate: '2026-09-10',
-    relatedLinks: [
-      { href: '/business/windoors', label: 'Facade and Fenestration', heroImg: '/img/content/office-partition.jpg' },
-    ],
+    cta: {
+      headline: 'Planning windows or a facade? Talk to our Facade and Fenestration team.',
+      text: 'Aluminium windows, doors, partitions and glazed facades fabricated to your specification.',
+      links: [{ href: '/business/windoors', label: 'Facade and Fenestration' }],
+    },
     content: [
       { type: 'p', text: 'Aluminium windows are stronger and slimmer-profiled, which suits large openings and contemporary facades; UPVC windows generally insulate better and cost less upfront. Neither is universally "better" — the right choice depends on your climate, budget, building type and the look you’re after.' },
 
@@ -105,9 +111,11 @@ module.exports = [
     excerpt: 'Working load limit, sling angle, and material all affect which lifting belt is safe for your job. Here’s how to choose — and inspect — correctly.',
     description: 'How to choose the right lifting belt (webbing sling): working load limits, colour codes, materials, sling angles and safe inspection practices.',
     publishedDate: '2026-09-10',
-    relatedLinks: [
-      { href: '/business/lifters', label: 'Industrial Lifting, Material Handling and Rigging Solutions', heroImg: '/img/content/lifters-hero-chain-hoists.jpg' },
-    ],
+    cta: {
+      headline: 'Need lifting equipment? Talk to our Industrial Lifting team.',
+      text: 'Lifting belts, wire ropes, chain blocks and pallet trucks for lifting and material handling jobs.',
+      links: [{ href: '/business/lifters', label: 'Industrial Lifting & Material Handling' }],
+    },
     content: [
       { type: 'p', text: 'The right lifting belt — more formally, a webbing sling — depends on three things: the working load limit (WLL) you need, the angle you’ll be lifting at, and the material being handled. Get any one of those wrong and you either risk an unsafe lift or pay for far more capacity than the job needs.' },
 
@@ -145,6 +153,125 @@ module.exports = [
       ] },
 
       { type: 'p', text: 'Excel Traders and Muzaf Enterprise, who manage Essar Sons Group’s <a href="/business/lifters">Industrial Lifting, Material Handling and Rigging Solutions</a> division, supply lifting belts alongside wire ropes, chain blocks and pallet trucks for lifting and material handling jobs across India.' },
+    ],
+  },
+  {
+    slug: 'window-glass-types-and-prices',
+    title: "Window Glass Types and Prices: A Buyer's Guide",
+    metaTitle: "Window Glass Types and Prices in India — A Buyer's Guide | Essar Sons Group",
+    excerpt: 'Clear, toughened, laminated or double-glazed? What each window glass type does, what drives its price, and how to choose.',
+    description: "Clear, toughened, laminated, or double-glazed? A plain-language guide to window glass types, what actually drives the price, and how to pick the right one for your home or building — from Essar Sons Group.",
+    publishedDate: '2026-10-06',
+    keywords: [
+      'window glass types India',
+      'glass price per sq ft India',
+      'toughened glass price',
+      'laminated glass price',
+      'double glazed window glass cost',
+      'best glass for windows',
+      'glass for home windows India',
+    ],
+    cta: {
+      headline: 'Need glass for your project? Talk to our Architectural Glass team.',
+      text: 'Tell us about your windows, facade or partitions and we’ll help you match the right glass.',
+      links: [{ href: '/business/architectural-glass', label: 'Architectural Glass Solutions' }],
+    },
+    content: [
+      { type: 'p', text: "\"Glass for my windows\" sounds like one product, but it almost never is. Float, toughened, laminated, double-glazed, Low-E — each is a different product with a different price, and the wrong pick is expensive to undo once it's installed. Here's what each type actually does, what drives its price, and how to choose." },
+
+      { type: 'h2', text: 'The main types, and what each is actually for' },
+      { type: 'ul', items: [
+        "<strong>Clear float glass</strong> — the baseline. Cheapest option, fine for standard low-risk windows where strength and safety codes aren't a factor.",
+        '<strong>Tinted / reflective glass</strong> — a coloured or reflective coating cuts some heat and glare for a moderate step up in price over clear float.',
+        '<strong>Toughened (tempered) glass</strong> — heat-treated for strength; breaks into small granules rather than sharp shards, and is required by code for many high-rise and public-facing applications.',
+        '<strong>Laminated glass</strong> — two or more panes bonded with a plastic interlayer; holds together even when cracked, used for safety, sound reduction, and security glazing.',
+        '<strong>Insulated Glass Units (IGU) / double glazing</strong> — two panes with a sealed air or gas gap between them, used for thermal insulation and noise reduction.',
+        '<strong>Low-E (low-emissivity) coated glass</strong> — a microscopically thin coating that blocks heat transfer while keeping visible light in, popular on facades to cut air-conditioning load.',
+        '<strong>Back-painted / lacquered glass</strong> — opaque coloured glass used decoratively for partitions, walls, and cladding (the same product used on the Mumbai Metro station glazing).',
+      ] },
+
+      { type: 'h2', text: 'What actually drives the price' },
+      { type: 'ul', items: [
+        '<strong>Thickness</strong> — every extra millimetre adds cost.',
+        '<strong>Processing</strong> — toughening, laminating, and IGU assembly are each an extra manufacturing step, not just a material choice.',
+        '<strong>Coatings and interlayers</strong> — Low-E coatings and coloured/acoustic interlayers cost more than clear.',
+        '<strong>Size and cutting complexity</strong> — large single panes and custom shapes cost more per square foot than standard sizes.',
+        '<strong>Installation complexity</strong> — framing type, site access, and height all affect the final bill beyond the glass itself.',
+      ] },
+
+      { type: 'h2', text: 'Indicative price tiers' },
+      { type: 'p', text: 'Relative order, cheapest to most expensive, for a standard size and thickness:' },
+      { type: 'table',
+        headers: ['Type', 'Typical use', 'Relative cost'],
+        rows: [
+          ['Clear float', 'Standard windows', '₹'],
+          ['Tinted / reflective', 'Heat & glare reduction', '₹₹'],
+          ['Toughened', 'Safety-code windows, doors, partitions', '₹₹'],
+          ['Laminated', 'Security, sound reduction, skylights', '₹₹₹'],
+          ['Back-painted / lacquered', 'Decorative partitions, cladding', '₹₹₹'],
+          ['Insulated (IGU) / Low-E', 'Facades, energy-conscious buildings', '₹₹₹₹'],
+        ] },
+
+      { type: 'h2', text: 'How to choose' },
+      { type: 'ul', items: [
+        '<strong>Home windows, general use</strong> → toughened or laminated for safety.',
+        '<strong>Road-facing home, or need quiet</strong> → laminated or acoustic IGU.',
+        '<strong>Office or commercial facade</strong> → Low-E combined with an IGU, to manage both heat and energy cost.',
+        '<strong>Retail partition, reception wall, decorative surface</strong> → back-painted glass.',
+      ] },
+
+      { type: 'p', text: 'Essar Sons Group has supplied and installed every type above, across homes, offices, retail spaces, and public infrastructure — including the <a href="/projects/mumbai-metro-stations-glass">toughened backpainted glass across nine Mumbai Metro stations</a>. For a quote matched to your actual project, reach out directly through our <a href="/business/architectural-glass">Architectural Glass Solutions</a> division, or use the Call and WhatsApp buttons on this page.' },
+    ],
+  },
+  {
+    slug: 'best-chain-hoist-for-lifting',
+    title: 'Best Chain Hoist for Lifting: How to Choose the Right One',
+    metaTitle: "Best Chain Hoist for Lifting — How to Choose the Right One | Essar Sons Group",
+    excerpt: 'Manual, hand-chain or electric chain hoist? How to choose by load capacity, lift height, duty cycle and site conditions.',
+    description: "Manual, hand-chain, or electric chain hoist? A practical guide to choosing the right lifting equipment by load capacity, lift height, duty cycle, and site conditions — from Essar Sons Group's lifting equipment division.",
+    publishedDate: '2026-10-06',
+    keywords: [
+      'best chain hoist for lifting',
+      'electric chain hoist India',
+      'manual lever hoist',
+      'chain block vs electric hoist',
+      'lifting equipment supplier Mumbai',
+      'how to choose a chain hoist',
+    ],
+    cta: {
+      headline: 'Choosing a hoist? Talk to our Industrial Lifting team.',
+      text: 'Talk to the team before you buy, so the hoist matches the actual job.',
+      links: [{ href: '/business/lifters', label: 'Industrial Lifting & Material Handling' }],
+    },
+    content: [
+      { type: 'p', text: "Most lifting problems on site trace back to one of two mistakes: the wrong capacity, or the wrong type of hoist for the conditions. Before buying or renting one, it's worth five minutes to get both right." },
+
+      { type: 'h2', text: 'The main types' },
+      { type: 'ul', items: [
+        '<strong>Manual lever hoist</strong> — operated by hand lever, no power needed. Best for occasional, light lifting in tight spaces or remote sites without electricity.',
+        '<strong>Hand chain hoist (chain block)</strong> — hand-chain operated, simple and affordable. The standard choice for workshops and low-frequency lifts.',
+        '<strong>Electric chain hoist</strong> — motor-driven, faster, and built for repeated or heavy-duty lifting. The standard on factory floors and active construction sites.',
+        '<strong>Pneumatic hoist</strong> — air-powered, used specifically where electric sparks are a hazard (flammable or explosive environments).',
+      ] },
+
+      { type: 'h2', text: 'What to check before choosing one' },
+      { type: 'ul', items: [
+        '<strong>Safe Working Load (SWL)</strong> — always choose a rated capacity above your heaviest real load, with margin, not exactly at it.',
+        '<strong>Lift height / headroom</strong> — confirm both how far the load needs to travel and how much clearance exists above the hoist itself.',
+        '<strong>Duty cycle</strong> — occasional lifts suit a manual or hand-chain hoist; continuous daily use calls for an electric one built for that duty.',
+        '<strong>Power availability</strong> — electric hoists need single- or three-phase power confirmed on site before you commit.',
+        '<strong>Standards and certification</strong> — look for proper load testing and certification, not just the lowest quote.',
+        '<strong>Environment</strong> — dusty, wet, outdoor, or hazardous conditions can rule out an otherwise good hoist.',
+      ] },
+
+      { type: 'h2', text: 'Common mistakes' },
+      { type: 'ul', items: [
+        'Buying on price alone, without a real safety margin above the actual load.',
+        "Ignoring headroom, so the hoist can't physically reach full lift height on site.",
+        'Skipping load testing or certification to save a little upfront.',
+      ] },
+
+      { type: 'p', text: 'Essar Sons Group’s lifting equipment division supplies, installs, and maintains hoists for construction and industrial clients across capacity ranges and duty cycles. Talk to the team before you buy, so the hoist matches the actual job — start with our <a href="/business/lifters">Industrial Lifting, Material Handling and Rigging Solutions</a> division, or use the Call and WhatsApp buttons on this page.' },
     ],
   },
 ];
