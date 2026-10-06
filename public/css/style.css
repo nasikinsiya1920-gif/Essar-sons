@@ -285,6 +285,10 @@ body:not(.home) .site-nav { background: rgba(14, 42, 59, 0.9); border-bottom-col
 .nav-logo img { height: 30px; width: auto; display: block; transition: filter 0.3s var(--ease-out); }
 .footer-brand .nav-logo img { height: 40px; margin-bottom: 20px; }
 
+.nav-right { display: flex; align-items: center; gap: 24px; }
+.header-call-btn { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.header-call-btn svg { flex-shrink: 0; }
+
 .nav-links { display: flex; align-items: center; gap: 34px; }
 .nav-links a {
   font-size: 13px;
@@ -339,6 +343,7 @@ body.home .site-nav:not(.is-scrolled) .nav-toggle span { background: var(--navy)
 
 @media (max-width: 900px) {
   .nav-toggle { display: flex; }
+  .nav-right { gap: 10px; }
   .nav-links {
     position: fixed;
     top: var(--nav-h); left: 0; right: 0;

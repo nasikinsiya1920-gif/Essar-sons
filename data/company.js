@@ -4,6 +4,7 @@ module.exports = {
   legalTag: 'Essar Sons Group',
   registeredAddress: 'Essar, 11 Unique Residency Shopping Centre, Agashi Road, Virar West — 401303',
   email: 'sales@essarsons.in',
+  phone: '+918369882427',
   site: 'www.essarsons.com',
   region: 'Mumbai Metropolitan Region, Maharashtra',
   established: 'Established 40 years ago',
