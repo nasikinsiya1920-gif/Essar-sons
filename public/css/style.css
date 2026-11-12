@@ -1121,8 +1121,17 @@ body:not(.home) .intro-overlay { display: none; }
    Footer
    ========================================================================== */
 
+.follow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
+  gap: 32px;
+  margin-top: 32px;
+}
+.follow-block { min-width: 0; }
+.follow-title { font-size: 22px; margin-bottom: 20px; }
+
 .site-footer { background: var(--navy); color: rgba(244, 246, 247, 0.7); padding: 72px 0 28px; }
-.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(244, 246, 247, 0.12); }
+.footer-grid { display: grid; grid-template-columns: 1.3fr 1.3fr 0.8fr 0.8fr; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(244, 246, 247, 0.12); }
 .footer-brand p { max-width: 34ch; font-size: 14px; margin-top: 16px; }
 .footer-col h3 { color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-family: var(--font-body); margin-bottom: 18px; }
 .footer-col li { margin-bottom: 11px; font-size: 14px; }
